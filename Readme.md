@@ -22,6 +22,7 @@ The Console app will contain following character:
 * Equipment abstract class
   * Weapons
   * Armor
+  
 
 
 
