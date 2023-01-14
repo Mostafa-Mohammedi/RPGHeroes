@@ -6,8 +6,6 @@ import no.noroff.heroes.hero.Warrior;
 public class Main {
     public static void main(String[] args) {
 
-        //Armor armor = new Armor("plate", 1, Armor_type.LEATHER, new HeroAttribute());
-
 
         Warrior mosti = new Warrior("mosti");
         try {
@@ -23,7 +21,9 @@ public class Main {
         }
 
         mosti.totalAttributes();
+        mosti.levelUp(3);
         mosti.damage();
+        System.out.println(mosti.display());
 
         System.out.println(mosti);
 

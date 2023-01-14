@@ -39,7 +39,6 @@ public class Warrior extends Hero{
 
     }
 
-
     // method
     @Override
     public void levelUp(double level_increase) {
@@ -60,9 +59,8 @@ public class Warrior extends Hero{
 
     @Override
     public void damage() {
-        total_warrior_damage = WeaponDamage + levelAttribute.getStrength();
-
-
+        total_warrior_damage = WeaponDamage * (1+ (levelAttribute.getStrength()/100));
+        System.out.println("total damage: " + total_warrior_damage);
 
     }
 
@@ -74,45 +72,55 @@ public class Warrior extends Hero{
         for (String armor : Valid_Armor_type) {
 
             if(armor.toUpperCase().equals(armor_type) && armor_level == level){
-                System.out.println("equipment: " + armor_type + " has been added to warrior");
-                return "equipment: " + armor_type + " has been added to warrior";
+
+                return "equipment: " + armor_type + " has been added to " + name;
             }
         }
 
-        throw new InvalidWeaponType( armor_type + " cannot be used for Warrior");
+        throw new InvalidWeaponType( armor_type + " cannot be used for " + this.getClass().getSimpleName() + " hero ");
     }
 
 
     @Override
     public String equip_weapon(String weapon_type, double weapon_level) throws InvalidWeaponType {
-        WeaponDamage += weapon_level;
+        //WeaponDamage += weapon_level;
 
         for (String weapon : valid_Weapon_type) {
 
             if(weapon.toUpperCase().equals(weapon_type) && weapon_level == level){
-                System.out.println("equipment: " + weapon_type + " has been added to warrior");
-                return "equipment: " + weapon_type + " has been added to warrior";
+                System.out.println("equipment: " + weapon_type + " has been added to " + name);
+                return "equipment: " + weapon_type + " has been added to " + name;
             }
         }
-        throw new InvalidWeaponType(weapon_type + " cannot be used for Warrior");
+        throw new InvalidWeaponType(weapon_type + " cannot be used for " + name);
     }
 
 
     @Override
     public void totalAttributes() {
 
-        total_warrior_attribute = (levelAttribute.getStrength() + levelAttribute.getDexterity() + levelAttribute.getIntelligence()) +  (WeaponDamage + armor_attribute);
+        total_warrior_attribute = (levelAttribute.getStrength() +
+                                    levelAttribute.getDexterity() +
+                                    levelAttribute.getIntelligence()) +
+                                    (WeaponDamage + armor_attribute);
 
     }
 
     @Override
-    public void display() {
-
+    public String display() {
+        return "name: " + name +
+                " class: " + this.getClass().getSimpleName() +
+                " level: " + level +
+                " strength: " +  levelAttribute.getStrength() +
+                " dexterity: " +levelAttribute.getDexterity() +
+                " intelligence: " + levelAttribute.getIntelligence() +
+                " Damage " + total_warrior_damage;
     }
 
     @Override
     public String toString() {
-        return  "Hero type " + name +
+        return  "Hero " + this.getClass().getSimpleName() +
+                " name " + name +
                 " level " + levelAttribute.getStrength() +
                 " dexterity " +  levelAttribute.getDexterity() +
                 " intelligence " + levelAttribute.getIntelligence() +
