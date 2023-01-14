@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8ed1e5e-b01b-43da-b653-eb4df5556550" name="Changes" comment="created method for calculation level up including level attribute for each level in the warrior class by multiple all the level attributes with their increase stats by the level increase.&#10;&#10;method: levelUp(double level_increase)">
+    <list default="true" id="b8ed1e5e-b01b-43da-b653-eb4df5556550" name="Changes" comment="Finished the range class with all the function and method.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/equipment/Weapon_type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/equipment/Weapon_type.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Mage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Range.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Range.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Rogue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Warrior.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,23 +50,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.editor",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="no.noroff.heroes.Main" />
@@ -104,7 +98,7 @@
       <workItem from="1673618583179" duration="20041000" />
       <workItem from="1673645050349" duration="6932000" />
       <workItem from="1673724197197" duration="4086000" />
-      <workItem from="1673728295987" duration="11020000" />
+      <workItem from="1673728295987" duration="12153000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.&#10;Added Readme.md file and wrote starting information about the hero class, attribute class and equipment class. added the hero class">
       <created>1673621694929</created>
@@ -162,7 +156,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673734076697</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Finished the marge class with all the function and method.&#10;Extended all the other class with the Hero class for implementation for the rest of the classes.">
+      <created>1673739795302</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1673739795302</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Finished the range class with all the function and method.">
+      <created>1673740215521</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1673740215521</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,7 +196,9 @@
     <MESSAGE value="created method for calculation total attributes in the warrior class by adding all the level attributes and equipment level together.&#10;&#10;method: totalAttributes()" />
     <MESSAGE value="created method for calculation level up including levelattribute for each level in the warrior class by multiple all the level attributes with their increase stats by the level increase.&#10;&#10;method: levelUp(double level_increase)" />
     <MESSAGE value="created method for calculation level up including level attribute for each level in the warrior class by multiple all the level attributes with their increase stats by the level increase.&#10;&#10;method: levelUp(double level_increase)" />
-    <option name="LAST_COMMIT_MESSAGE" value="created method for calculation level up including level attribute for each level in the warrior class by multiple all the level attributes with their increase stats by the level increase.&#10;&#10;method: levelUp(double level_increase)" />
+    <MESSAGE value="Finished the marge class with all the function and method.&#10;Extended all the other class with the Hero class for implementation for the rest of the classes." />
+    <MESSAGE value="Finished the range class with all the function and method." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished the range class with all the function and method." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
