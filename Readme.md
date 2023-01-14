@@ -27,10 +27,10 @@ The Console app will contain following character:
 
 * Contains the heroes name and characteristic
 
-  * Mage class inherits from Character class 
-  * Ranger class inherits from Character class
-  * Rogue class inherits from Character class
-  * Warrior class inherits from Character class
+  * Mage class extends from Character class 
+  * Ranger class extends from Character class
+  * Rogue class extends from Character class
+  * Warrior class extends from Character class
 
 
 * Hero Attributes class
@@ -40,6 +40,16 @@ The Console app will contain following character:
 * Items abstract class
   * Weapons
   * Armor
+
+
+* Every Hero type will extend several Method from the Hero class
+
+  * LevelUp: increase the level of the hero
+  * Damage: is the damage a hero deals 
+  * equip_armor: method to equip the armor of the hero
+  * equip_weapon: method to equip a weapon to the hero
+  * totalAttribtues: the total level of the hero including the heroes stats
+  * display: the total state of the hero including their name and class
   
 
 

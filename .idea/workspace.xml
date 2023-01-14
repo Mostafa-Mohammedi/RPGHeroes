@@ -4,26 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8ed1e5e-b01b-43da-b653-eb4df5556550" name="Changes" comment="Added initial value for Warrior class.&#10;Added Items and Weapon class with initial.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/CustomException/InvalidWeaponType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/Slot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/equipment/Armor_type.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/equipment/Weapon_type.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/item/Armor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/item/Weapon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="b8ed1e5e-b01b-43da-b653-eb4df5556550" name="Changes" comment="finished create weapon method with the custom exception for the warrior class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/Equip/Items.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/Equip/Slot.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/Equip/item/Weapon.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/HeroAttribute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/HeroAttribute.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/HeroAttribute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/HeroAttribute.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/hero_type/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Mage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/hero_type/Range.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Range.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/hero_type/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Rogue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/hero_type/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Warrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Warrior.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +102,7 @@
       <workItem from="1673618583179" duration="20041000" />
       <workItem from="1673645050349" duration="6932000" />
       <workItem from="1673724197197" duration="4086000" />
-      <workItem from="1673728295987" duration="324000" />
+      <workItem from="1673728295987" duration="3535000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.&#10;Added Readme.md file and wrote starting information about the hero class, attribute class and equipment class. added the hero class">
       <created>1673621694929</created>
@@ -145,7 +132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673640314472</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="finished create weapon method with the custom exception for the warrior class">
+      <created>1673728677570</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1673728677570</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,25 +161,16 @@
     <MESSAGE value="Create fields and method in hero class. &#10;Added the different hero classes." />
     <MESSAGE value="Added initial value for Warrior classs.&#10;Added Items and Weapon class with initial." />
     <MESSAGE value="Added initial value for Warrior class.&#10;Added Items and Weapon class with initial." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added initial value for Warrior class.&#10;Added Items and Weapon class with initial." />
+    <MESSAGE value="finished create weapon method with the custom exception for the warrior class" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished create weapon method with the custom exception for the warrior class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/no/noroff/heroes/Main.java</url>
-          <line>11</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/no/noroff/heroes/Main.java</url>
-          <line>12</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/no/noroff/heroes/Main.java</url>
-          <line>14</line>
-          <option name="timeStamp" value="6" />
+          <line>24</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

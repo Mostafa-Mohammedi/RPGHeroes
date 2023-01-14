@@ -16,9 +16,15 @@ public class Main {
             throw new RuntimeException(e);
         }
 
+        try {
+            mosti.equip_armor("MAIL", 1);
+        } catch (InvalidWeaponType e) {
+            throw new RuntimeException(e);
+        }
+
+        mosti.totalAttributes();
+
         System.out.println(mosti);
-
-
 
     }
 }
