@@ -5,15 +5,12 @@ import no.noroff.heroes.equipment.Armor_type;
 import no.noroff.heroes.equipment.Weapon_type;
 
 public class Warrior extends Hero{
+    final private int strength_increase_each_level = 3;
+    final private int dexterity_increase_each_level = 2;
+    final private int intelligence_increase_each_level = 1;
 
-    private double warrior_Strength;
-
-    private double total_warrior_attribute = 0;
-
-    private int strength_increase_each_level = 3;
-    private int dexterity_increase_each_level = 2;
-    private int intelligence_increase_each_level = 1;
-
+    private double total_warrior_attribute;
+    private double total_warrior_damage;
 
     //constructor
     public Warrior(String name) {
@@ -63,6 +60,8 @@ public class Warrior extends Hero{
 
     @Override
     public void damage() {
+        total_warrior_damage = WeaponDamage + levelAttribute.getStrength();
+
 
 
     }

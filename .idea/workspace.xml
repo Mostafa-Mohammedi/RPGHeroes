@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8ed1e5e-b01b-43da-b653-eb4df5556550" name="Changes" comment="created method for calculation total attributes in the warrior class by adding all the level attributes and equipment level together.&#10;&#10;method: totalAttributes()">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Hero.java" afterDir="false" />
+    <list default="true" id="b8ed1e5e-b01b-43da-b653-eb4df5556550" name="Changes" comment="created method for calculation level up including levelattribute for each level in the warrior class by multiple all the level attributes with their increase stats by the level increase.&#10;&#10;method: levelUp(double level_increase)">
       <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Warrior.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +97,7 @@
       <workItem from="1673618583179" duration="20041000" />
       <workItem from="1673645050349" duration="6932000" />
       <workItem from="1673724197197" duration="4086000" />
-      <workItem from="1673728295987" duration="4944000" />
+      <workItem from="1673728295987" duration="5644000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.&#10;Added Readme.md file and wrote starting information about the hero class, attribute class and equipment class. added the hero class">
       <created>1673621694929</created>
@@ -143,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673731956344</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="created method for calculation level up including levelattribute for each level in the warrior class by multiple all the level attributes with their increase stats by the level increase.&#10;&#10;method: levelUp(double level_increase)">
+      <created>1673733666795</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1673733666795</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,7 +172,8 @@
     <MESSAGE value="Added initial value for Warrior class.&#10;Added Items and Weapon class with initial." />
     <MESSAGE value="finished create weapon method with the custom exception for the warrior class" />
     <MESSAGE value="created method for calculation total attributes in the warrior class by adding all the level attributes and equipment level together.&#10;&#10;method: totalAttributes()" />
-    <option name="LAST_COMMIT_MESSAGE" value="created method for calculation total attributes in the warrior class by adding all the level attributes and equipment level together.&#10;&#10;method: totalAttributes()" />
+    <MESSAGE value="created method for calculation level up including levelattribute for each level in the warrior class by multiple all the level attributes with their increase stats by the level increase.&#10;&#10;method: levelUp(double level_increase)" />
+    <option name="LAST_COMMIT_MESSAGE" value="created method for calculation level up including levelattribute for each level in the warrior class by multiple all the level attributes with their increase stats by the level increase.&#10;&#10;method: levelUp(double level_increase)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

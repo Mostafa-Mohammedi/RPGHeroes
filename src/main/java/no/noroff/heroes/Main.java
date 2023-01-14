@@ -23,6 +23,7 @@ public class Main {
         }
 
         mosti.totalAttributes();
+        mosti.damage();
 
         System.out.println(mosti);
 
