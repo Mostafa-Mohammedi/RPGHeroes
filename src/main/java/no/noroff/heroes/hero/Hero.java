@@ -14,7 +14,7 @@ import java.util.HashMap;
 public abstract class Hero {
     String name;
     double level = 1;
-    double weapon_attribute;
+    double WeaponDamage;
     double armor_attribute;
 
 

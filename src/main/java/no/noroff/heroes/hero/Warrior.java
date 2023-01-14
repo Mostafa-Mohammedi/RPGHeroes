@@ -6,7 +6,13 @@ import no.noroff.heroes.equipment.Weapon_type;
 
 public class Warrior extends Hero{
 
-    double total_warrior_attribute = 0;
+    private double warrior_Strength;
+
+    private double total_warrior_attribute = 0;
+
+    private int strength_increase_each_level = 3;
+    private int dexterity_increase_each_level = 2;
+    private int intelligence_increase_each_level = 1;
 
 
     //constructor
@@ -41,10 +47,23 @@ public class Warrior extends Hero{
     @Override
     public void levelUp(double level_increase) {
 
+
+        double total_strength_Increase = (level_increase * strength_increase_each_level) + levelAttribute.getStrength();
+        double total_dexterity_Increase = (level_increase * dexterity_increase_each_level) + levelAttribute.getDexterity();
+        double total_intelligence_Increase = (level_increase * intelligence_increase_each_level) + levelAttribute.getIntelligence();
+
+        levelAttribute.setStrength(total_strength_Increase) ;
+        levelAttribute.setDexterity(total_dexterity_Increase);
+        levelAttribute.setIntelligence(total_intelligence_Increase);
+
+        level += level_increase;
+        System.out.println("total level increase: " + total_strength_Increase);
+
     }
 
     @Override
     public void damage() {
+
 
     }
 
@@ -67,7 +86,7 @@ public class Warrior extends Hero{
 
     @Override
     public String equip_weapon(String weapon_type, double weapon_level) throws InvalidWeaponType {
-        weapon_attribute += weapon_level;
+        WeaponDamage += weapon_level;
 
         for (String weapon : valid_Weapon_type) {
 
@@ -83,10 +102,7 @@ public class Warrior extends Hero{
     @Override
     public void totalAttributes() {
 
-        total_warrior_attribute = (levelAttribute.getStrength() + levelAttribute.getDexterity() + levelAttribute.getIntelligence()) +  (weapon_attribute + armor_attribute);
-
-
-
+        total_warrior_attribute = (levelAttribute.getStrength() + levelAttribute.getDexterity() + levelAttribute.getIntelligence()) +  (WeaponDamage + armor_attribute);
 
     }
 
