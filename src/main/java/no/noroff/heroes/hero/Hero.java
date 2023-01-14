@@ -1,7 +1,14 @@
 package no.noroff.heroes.hero;
 
-import no.noroff.heroes.Equip.Items;
+import no.noroff.heroes.CustomException.InvalidWeaponType;
+import no.noroff.heroes.Item;
+import no.noroff.heroes.Slot;
+import no.noroff.heroes.equipment.Weapon_type;
+import no.noroff.heroes.HeroAttribute;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -9,22 +16,30 @@ import java.util.List;
  */
 public abstract class Hero {
     String name;
-    double level;
+    double level = 1;
+
 
     protected HeroAttribute levelAttribute;
-    List<Items> equipment;
-    List<String> valid_Weapon_type;
-    List<String> getValid_Armor_type;
+    protected HashMap<Slot, Item> equipment;
+    ArrayList<String> valid_Weapon_type;
+    ArrayList<String> Valid_Armor_type;
 
     public Hero(String name) {
         this.name = name;
         this.levelAttribute = new HeroAttribute();
-        level = 1;
+        equipment = new HashMap<Slot, Item>();
+        valid_Weapon_type = new ArrayList<String>();
+
+
+
     }
 
     public abstract void levelUp(double level_increase);
     public abstract void damage();
-    public abstract void equip();
+    public abstract void equip_armor(String armor_type, double armor_level);
+
+    public abstract String equip_weapon(String weapon_type, double weapon_level) throws InvalidWeaponType;
+
     public abstract void totalAttributes();
 
     public abstract void display();

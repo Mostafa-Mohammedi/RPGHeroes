@@ -1,4 +1,4 @@
-package no.noroff.heroes.hero;
+package no.noroff.heroes;
 
 public class HeroAttribute {
     private double strength;

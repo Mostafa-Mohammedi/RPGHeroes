@@ -4,16 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8ed1e5e-b01b-43da-b653-eb4df5556550" name="Changes" comment="Create fields and method in hero class. &#10;Added the different hero classes.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/Equip/item/Weapon.java" afterDir="false" />
+    <list default="true" id="b8ed1e5e-b01b-43da-b653-eb4df5556550" name="Changes" comment="Added initial value for Warrior class.&#10;Added Items and Weapon class with initial.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/CustomException/InvalidWeaponType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/Slot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/equipment/Armor_type.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/equipment/Weapon_type.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/item/Armor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/item/Weapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/Equipment/Items.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/Equip/Items.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/Equipment/Slot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/Equip/Slot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/Equip/Items.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/Equip/Slot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/Equip/item/Weapon.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/HeroAttribute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/HeroAttribute.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/hero_type/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/hero_type/Warrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/HeroAttribute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/HeroAttribute.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/hero_type/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Mage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/hero_type/Range.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Range.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/hero_type/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Rogue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/hero_type/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Warrior.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +50,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -56,23 +67,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.editor",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="no.noroff.heroes.Main" />
@@ -101,7 +112,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1673618582024</updated>
-      <workItem from="1673618583179" duration="16040000" />
+      <workItem from="1673618583179" duration="20041000" />
+      <workItem from="1673645050349" duration="6932000" />
+      <workItem from="1673724197197" duration="4086000" />
+      <workItem from="1673728295987" duration="324000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.&#10;Added Readme.md file and wrote starting information about the hero class, attribute class and equipment class. added the hero class">
       <created>1673621694929</created>
@@ -124,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673633391231</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added initial value for Warrior class.&#10;Added Items and Weapon class with initial.">
+      <created>1673640314472</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1673640314472</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,20 +165,27 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit.&#10;Added Readme.md file and wrote starting information about the hero class, attribute class and equipment class. added the hero class" />
     <MESSAGE value="Create fields and method in hero class. &#10;Added the different hero classes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Create fields and method in hero class. &#10;Added the different hero classes." />
+    <MESSAGE value="Added initial value for Warrior classs.&#10;Added Items and Weapon class with initial." />
+    <MESSAGE value="Added initial value for Warrior class.&#10;Added Items and Weapon class with initial." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added initial value for Warrior class.&#10;Added Items and Weapon class with initial." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/no/noroff/heroes/Main.java</url>
-          <line>8</line>
-          <option name="timeStamp" value="2" />
+          <line>11</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/no/noroff/heroes/Main.java</url>
-          <line>7</line>
-          <option name="timeStamp" value="3" />
+          <line>12</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/no/noroff/heroes/Main.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -167,7 +195,7 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/RPGHeroes$Main.ic" NAME="Main Coverage Results" MODIFIED="1673630735910" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/RPGHeroes$Main.ic" NAME="Main Coverage Results" MODIFIED="1673727464883" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>no.noroff.heroes.*</FILTER>
     </SUITE>
   </component>
