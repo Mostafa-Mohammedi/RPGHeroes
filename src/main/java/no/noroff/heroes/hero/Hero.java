@@ -1,5 +1,7 @@
 package no.noroff.heroes.hero;
 
+import no.noroff.heroes.CustomException.InvalidArmorType;
+import no.noroff.heroes.CustomException.InvalidLevel;
 import no.noroff.heroes.CustomException.InvalidWeaponType;
 import no.noroff.heroes.Item;
 import no.noroff.heroes.Slot;
@@ -36,9 +38,9 @@ public abstract class Hero {
 
     public abstract void levelUp(double level_increase);
     public abstract void damage();
-    public abstract String equip_armor(String armor_type, double armor_level) throws InvalidWeaponType;
+    public abstract String equip_armor(String armor_type, double armor_level) throws InvalidWeaponType, InvalidArmorType;
 
-    public abstract String equip_weapon(String weapon_type, double weapon_level) throws InvalidWeaponType;
+    public abstract String equip_weapon(String weapon_name, String weapon_type, double weapon_level) throws InvalidWeaponType, InvalidLevel;
 
     public abstract void totalAttributes();
 

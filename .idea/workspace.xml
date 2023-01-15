@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8ed1e5e-b01b-43da-b653-eb4df5556550" name="Changes" comment="created Warrior test class.&#10;added a test for checking initial name and stats when creating a warrior object.&#10;added a test for checking the warrior stats after leveling up.">
+    <list default="true" id="b8ed1e5e-b01b-43da-b653-eb4df5556550" name="Changes" comment="Added test for checking the weapon data and armor data">
+      <change afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/CustomException/InvalidArmorType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/CustomException/InvalidLevel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/item/Armor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/item/Armor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/item/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/item/Weapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/CustomException/InvalidWeaponType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/CustomException/InvalidWeaponType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Hero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Mage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Range.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Range.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Rogue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Warrior.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/WarriorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/WarriorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +30,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand />
@@ -37,8 +46,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -84,8 +93,21 @@
       <recent name="no.noroff.heroes.hero" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.WarriorTest.test_armor_data_correct">
-    <configuration name="WarriorTest.Hero_level_correct_level_increase" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.WarriorTest.equip_warrior_check_InvalidLevel">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="no.noroff.heroes.Main" />
+      <module name="RPGHeroes.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="no.noroff.heroes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WarriorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -98,7 +120,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;WarriorTest.Hero_level_correct_level_increase&quot;" />
+            <option value="&quot;WarriorTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -108,7 +130,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="WarriorTest.Initialize_correct_name_level_attribute" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="WarriorTest.equip_warrior" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -121,7 +143,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;WarriorTest.Initialize_correct_name_level_attribute&quot;" />
+            <option value="&quot;WarriorTest.equip_warrior&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -131,7 +153,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="WarriorTest.levelUp" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="WarriorTest.equip_warrior_check_InvalidLevel" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -144,7 +166,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;WarriorTest.levelUp&quot;" />
+            <option value="&quot;WarriorTest.equip_warrior_check_InvalidLevel&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -154,7 +176,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="WarriorTest.test_armor_data_correct" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="WarriorTest.equip_warrior_check_exception" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -167,30 +189,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;WarriorTest.test_armor_data_correct&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="WarriorTest.test_weapon_data_correct" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;WarriorTest.test_weapon_data_correct&quot;" />
+            <option value="&quot;WarriorTest.equip_warrior_check_exception&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -202,11 +201,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.WarriorTest.test_armor_data_correct" />
-        <item itemvalue="Gradle.WarriorTest.test_weapon_data_correct" />
-        <item itemvalue="Gradle.WarriorTest.Hero_level_correct_level_increase" />
-        <item itemvalue="Gradle.WarriorTest.Initialize_correct_name_level_attribute" />
-        <item itemvalue="Gradle.WarriorTest.levelUp" />
+        <item itemvalue="Gradle.WarriorTest.equip_warrior_check_InvalidLevel" />
+        <item itemvalue="Gradle.WarriorTest.equip_warrior_check_exception" />
+        <item itemvalue="Gradle.WarriorTest.equip_warrior" />
+        <item itemvalue="Gradle.WarriorTest" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -223,7 +222,7 @@
       <workItem from="1673724197197" duration="4086000" />
       <workItem from="1673728295987" duration="15685000" />
       <workItem from="1673786125650" duration="5990000" />
-      <workItem from="1673792316472" duration="3537000" />
+      <workItem from="1673792316472" duration="13095000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.&#10;Added Readme.md file and wrote starting information about the hero class, attribute class and equipment class. added the hero class">
       <created>1673621694929</created>
@@ -316,7 +315,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673792562123</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Added test for checking the weapon data and armor data">
+      <created>1673796111348</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1673796111348</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,7 +353,23 @@
     <MESSAGE value="Finished the rogue class with all the function and method." />
     <MESSAGE value="added class diagram in readme.md" />
     <MESSAGE value="created Warrior test class.&#10;added a test for checking initial name and stats when creating a warrior object.&#10;added a test for checking the warrior stats after leveling up." />
-    <option name="LAST_COMMIT_MESSAGE" value="created Warrior test class.&#10;added a test for checking initial name and stats when creating a warrior object.&#10;added a test for checking the warrior stats after leveling up." />
+    <MESSAGE value="Added test for checking the weapon data and armor data" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added test for checking the weapon data and armor data" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/WarriorTest.java</url>
+          <line>195</line>
+          <properties class="WarriorTest" method="equip_warrior_check_InvalidLevel">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

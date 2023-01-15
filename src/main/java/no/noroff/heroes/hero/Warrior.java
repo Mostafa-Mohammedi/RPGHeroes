@@ -1,5 +1,8 @@
 package no.noroff.heroes.hero;
+import no.noroff.heroes.CustomException.InvalidArmorType;
+import no.noroff.heroes.CustomException.InvalidLevel;
 import no.noroff.heroes.CustomException.InvalidWeaponType;
+import no.noroff.heroes.Item;
 import no.noroff.heroes.Slot;
 import no.noroff.heroes.equipment.Armor_type;
 import no.noroff.heroes.equipment.Weapon_type;
@@ -126,7 +129,7 @@ public class Warrior extends Hero{
     }
 
     @Override
-    public String equip_armor(String armor_type, double armor_level) throws InvalidWeaponType {
+    public String equip_armor(String armor_type, double armor_level) throws InvalidArmorType {
 
         armor_attribute = armor_level;
 
@@ -138,22 +141,25 @@ public class Warrior extends Hero{
             }
         }
 
-        throw new InvalidWeaponType( armor_type + " cannot be used for " + this.getClass().getSimpleName() + " hero ");
+        throw new InvalidArmorType( armor_type + " cannot be used for " + this.getClass().getSimpleName() + " hero ");
     }
 
 
     @Override
-    public String equip_weapon(String weapon_type, double weapon_level) throws InvalidWeaponType {
-        //WeaponDamage += weapon_level;
+    public String equip_weapon(String weapon_name, String weapon_type, double weapon_level) throws InvalidLevel, InvalidWeaponType {
 
-        for (String weapon : valid_Weapon_type) {
-
-            if(weapon.toUpperCase().equals(weapon_type) && weapon_level == level){
-                System.out.println("equipment: " + weapon_type + " has been added to " + name);
-                return "equipment: " + weapon_type + " has been added to " + name;
+            for (String weapon : valid_Weapon_type) {
+                if (weapon.toLowerCase().equals(weapon_type) && weapon_level == level) {
+                    System.out.println("weapon: " + weapon_name  + " has been added to " + name);
+                    return "equipment: " + weapon_type + " has been added to " + name;
+                }
+                else if(weapon.toLowerCase().equals(weapon_type) && weapon_level != level){
+                    throw new InvalidLevel(name);
+                }
             }
-        }
-        throw new InvalidWeaponType(weapon_type + " cannot be used for " + name);
+            throw new InvalidWeaponType(weapon_type,  this.getClass().getSimpleName());
+
+
     }
 
 

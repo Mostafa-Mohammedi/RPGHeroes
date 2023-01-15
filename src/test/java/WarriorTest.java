@@ -1,3 +1,5 @@
+import no.noroff.heroes.CustomException.InvalidLevel;
+import no.noroff.heroes.CustomException.InvalidWeaponType;
 import no.noroff.heroes.HeroAttribute;
 import no.noroff.heroes.Slot;
 import no.noroff.heroes.equipment.Armor_type;
@@ -145,24 +147,70 @@ class WarriorTest {
                 .getStrength());
     }
 
+    @Test
+    void equip_warrior() throws InvalidLevel, InvalidWeaponType {
+
+        var sword = new Weapon("legendary sword",
+                1,
+                Slot.WEAPON,
+                1,
+                Weapon_type.SWORDS);
+
+        String weapon_type =  sword.getWeaponType().name().toLowerCase();
+        String weapon_name = sword.get_weapon_name();
+        double weapon_level = sword.get_weapon_level();
+
+        var warrior = new Warrior("Djengis Khan");
+
+        assertEquals("equipment: " +
+                weapon_type + " has been added to " +
+                warrior.getWarrior_name(),
+                warrior.equip_weapon(weapon_name,
+                        weapon_type, weapon_level));
+
+
+    }
+
 
     @Test
-    void damage() {
+    void equip_warrior_check_invalidWeaponType() throws InvalidLevel, InvalidWeaponType {
+
+        var staff = new Weapon("begynner staff",
+                1,
+                Slot.WEAPON,
+                1,
+                Weapon_type.STAFF);
+
+        String weapon_type = staff.getWeaponType().name().toLowerCase();
+        String weapon_name = staff.get_weapon_name();
+        double weapon_level = staff.get_weapon_level();
+
+        var warrior = new Warrior("Djengis Khan");
+
+        assertThrows(InvalidWeaponType.class, () -> {
+            warrior.equip_weapon(weapon_name, weapon_type, weapon_level);
+        });
     }
 
     @Test
-    void equip_armor() {
+    void equip_warrior_check_InvalidLevel() throws InvalidLevel, InvalidWeaponType {
+
+        var sword = new Weapon("legendary sword",
+                3,
+                Slot.WEAPON,
+                1,
+                Weapon_type.SWORDS);
+
+        String weapon_type = sword.getWeaponType().name().toLowerCase();
+        String weapon_name = sword.get_weapon_name();
+        double weapon_level = sword.get_weapon_level();
+
+        var warrior = new Warrior("Djengis Khan");
+
+        assertThrows(InvalidLevel.class, () -> {
+            warrior.equip_weapon(weapon_name, weapon_type.toLowerCase(), weapon_level);
+        });
     }
 
-    @Test
-    void equip_weapon() {
-    }
 
-    @Test
-    void totalAttributes() {
-    }
-
-    @Test
-    void display() {
-    }
 }
