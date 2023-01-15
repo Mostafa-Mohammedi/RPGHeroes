@@ -44,7 +44,7 @@ The Console app will contain following character:
 
 ## Class diagram
 
-![img_1.png](img_1.png)![img.png](img.png)
+![img_1.png](img_1.png)
 
 
 
