@@ -42,6 +42,12 @@ The Console app will contain following character:
   * Armor
 
 
+## Class diagram
+
+![img_1.png](img_1.png)![img.png](img.png)
+
+
+
 * Every Hero type will extend several Method from the Hero class
 
   * LevelUp: increase the level of the hero

@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8ed1e5e-b01b-43da-b653-eb4df5556550" name="Changes" comment="Finished the range class with all the function and method.">
+    <list default="true" id="b8ed1e5e-b01b-43da-b653-eb4df5556550" name="Changes" comment="Finished the rogue class with all the function and method.">
+      <change afterPath="$PROJECT_DIR$/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/WarriorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Rogue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/HeroAttribute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/HeroAttribute.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +39,7 @@
       <list>
         <option value="Enum" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -56,17 +61,30 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
+    "last_directory_selection": "C:/Java/RPGHeroes/src/test/java",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Problems",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.editor",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+      <recent name="no.noroff.heroes.hero" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="no.noroff.heroes.Main" />
@@ -98,7 +116,7 @@
       <workItem from="1673618583179" duration="20041000" />
       <workItem from="1673645050349" duration="6932000" />
       <workItem from="1673724197197" duration="4086000" />
-      <workItem from="1673728295987" duration="12153000" />
+      <workItem from="1673728295987" duration="15319000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.&#10;Added Readme.md file and wrote starting information about the hero class, attribute class and equipment class. added the hero class">
       <created>1673621694929</created>
@@ -170,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673740215521</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Finished the rogue class with all the function and method.">
+      <created>1673740695254</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1673740695254</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,7 +223,8 @@
     <MESSAGE value="created method for calculation level up including level attribute for each level in the warrior class by multiple all the level attributes with their increase stats by the level increase.&#10;&#10;method: levelUp(double level_increase)" />
     <MESSAGE value="Finished the marge class with all the function and method.&#10;Extended all the other class with the Hero class for implementation for the rest of the classes." />
     <MESSAGE value="Finished the range class with all the function and method." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished the range class with all the function and method." />
+    <MESSAGE value="Finished the rogue class with all the function and method." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished the rogue class with all the function and method." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

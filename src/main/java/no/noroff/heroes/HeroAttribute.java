@@ -6,7 +6,6 @@ public class HeroAttribute {
     private double intelligence;
 
 
-
     // constructor
 
 
