@@ -9,8 +9,17 @@ public class Warrior extends Hero{
     final private int dexterity_increase_each_level = 2;
     final private int intelligence_increase_each_level = 1;
 
+
+     private final double warrior_level;
+     private final String warrior_name;
+    final private double strength;
+    final private double dexterity;
+    final private double intelligence;
+
     private double total_warrior_attribute;
     private double total_warrior_damage;
+
+
 
     //constructor
     public Warrior(String name) {
@@ -18,9 +27,17 @@ public class Warrior extends Hero{
 
         // level
 
+        warrior_level = level = 1;
+        // attribute
+        warrior_name = name;
         levelAttribute.setStrength(5);
         levelAttribute.setDexterity(2);
         levelAttribute.setIntelligence(1);
+
+        // get initial strenght
+        strength = levelAttribute.getStrength();
+        dexterity = levelAttribute.getDexterity();
+        intelligence = levelAttribute.getIntelligence();
 
         // slot item
         equipment.put(Slot.HEAD, null);
@@ -37,6 +54,50 @@ public class Warrior extends Hero{
         Valid_Armor_type.add(Armor_type.MAIL.name());
         Valid_Armor_type.add(Armor_type.PLATE.name());
 
+    }
+
+    //getter setter
+
+    public int getStrength_increase_each_level() {
+        return strength_increase_each_level;
+    }
+
+    public int getDexterity_increase_each_level() {
+        return dexterity_increase_each_level;
+    }
+
+    public int getIntelligence_increase_each_level() {
+        return intelligence_increase_each_level;
+    }
+
+
+    public double getWarrior_level() {
+        return warrior_level;
+    }
+
+    public String getWarrior_name() {
+        return warrior_name;
+    }
+
+    public double getStrength() {
+        return strength;
+    }
+
+    public double getDexterity() {
+        return dexterity;
+    }
+
+    public double getIntelligence() {
+        return intelligence;
+    }
+
+
+    public double getTotal_warrior_attribute() {
+        return total_warrior_attribute;
+    }
+
+    public double getTotal_warrior_damage() {
+        return total_warrior_damage;
     }
 
     // method
