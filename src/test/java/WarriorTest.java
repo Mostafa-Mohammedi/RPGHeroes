@@ -1,6 +1,10 @@
 import no.noroff.heroes.HeroAttribute;
-import no.noroff.heroes.hero.Hero;
+import no.noroff.heroes.Slot;
+import no.noroff.heroes.equipment.Armor_type;
+import no.noroff.heroes.equipment.Weapon_type;
 import no.noroff.heroes.hero.Warrior;
+import no.noroff.heroes.item.Armor;
+import no.noroff.heroes.item.Weapon;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -79,6 +83,68 @@ class WarriorTest {
 
 
     }
+
+    @Test
+    void test_weapon_data_correct(){
+
+        var weapon = new Weapon("Bronx Axe",
+                1,
+                Slot.WEAPON,
+                1,
+                Weapon_type.AXES);
+
+        String weapon_name = weapon.get_weapon_name();
+        String get_slot = weapon.get_slot();
+        int required_weapon_level = weapon.get_weapon_level();
+
+
+
+        assertEquals("Bronx Axe", weapon_name);
+
+        assertEquals("weapon", get_slot.toLowerCase());
+
+        assertEquals("axes", weapon.getWeaponType()
+                .name()
+                .toLowerCase());
+        assertEquals( 1, required_weapon_level );
+
+        assertEquals(1, weapon.getWeaponDamage());
+
+
+
+
+
+    }
+
+    @Test
+    void test_armor_data_correct(){
+        var hero_attribute = new HeroAttribute();
+        hero_attribute.setStrength(3);
+        var armor = new Armor("Bronx Plate",
+                1,
+                Slot.BODY,
+                Armor_type.PLATE,
+                hero_attribute);
+
+        String armor_name = armor.get_armor_name();
+        String slot =armor.get_slot();
+        double required_armor_level = armor.get_armor_level();
+
+
+        assertEquals("Bronx Plate", armor_name);
+
+        assertEquals("body", slot.toLowerCase());
+
+        assertEquals(1, required_armor_level);
+
+        assertEquals("plate", armor.getArmorType()
+                .name()
+                .toLowerCase());
+        assertEquals(3, armor
+                .getArmorAttribute()
+                .getStrength());
+    }
+
 
     @Test
     void damage() {

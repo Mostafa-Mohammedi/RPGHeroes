@@ -3,17 +3,18 @@ package no.noroff.heroes;
 import no.noroff.heroes.Slot;
 
 public abstract class Item {
-    String name;
-    int RequiredLevel;
-    Slot slot;
+    protected String name;
+    protected int RequiredLevel;
+    protected Slot slot;
 
 
 
     // constructor
 
-    public Item(String name, int requiredLevel) {
+    public Item(String name, int requiredLevel, Slot slot) {
         this.name = name;
         RequiredLevel = requiredLevel;
+        this.slot = slot;
     }
 
 

@@ -34,7 +34,7 @@ public class Warrior extends Hero{
         levelAttribute.setDexterity(2);
         levelAttribute.setIntelligence(1);
 
-        // get initial strenght
+        // get initial strength
         strength = levelAttribute.getStrength();
         dexterity = levelAttribute.getDexterity();
         intelligence = levelAttribute.getIntelligence();
