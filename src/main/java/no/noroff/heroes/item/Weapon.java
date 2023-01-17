@@ -6,11 +6,11 @@ import no.noroff.heroes.Item;
 
 public class Weapon extends Item {
 
-    private double weaponDamage;
+    private int weaponDamage;
     private Weapon_type weaponType;
 
 
-    public Weapon(String name, int requiredLevel, Slot slot, double weaponDamage, Weapon_type weaponType) {
+    public Weapon(String name, int requiredLevel, Slot slot, int weaponDamage, Weapon_type weaponType) {
         super(name, requiredLevel, slot);
         this.weaponDamage = weaponDamage;
         this.weaponType = weaponType;
@@ -20,7 +20,7 @@ public class Weapon extends Item {
 
     // getter  setter
 
-    public double getWeaponDamage() {
+    public int getWeaponDamage() {
         return weaponDamage;
     }
 

@@ -22,7 +22,7 @@ Every hero start at level 1 and initial hero attribute example:
 
 The Console app will contain following character:
 
-* Hero Abstract class
+* Test_Hero Abstract class
 
 
 * Contains the heroes name and characteristic
@@ -33,7 +33,7 @@ The Console app will contain following character:
   * Warrior class extends from Character class
 
 
-* Hero Attributes class
+* Test_Hero Attributes class
   * Contains a hashmap of heroes statics 
 
 
@@ -48,7 +48,7 @@ The Console app will contain following character:
 
 
 
-* Every Hero type will extend several Method from the Hero class
+* Every Test_Hero type will extend several Method from the Test_Hero class
 
   * LevelUp: increase the level of the hero
   * Damage: is the damage a hero deals 

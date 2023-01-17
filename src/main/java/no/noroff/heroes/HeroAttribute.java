@@ -10,9 +10,12 @@ public class HeroAttribute {
 
 
     public HeroAttribute() {
-        this.strength = 0;
-        this.dexterity = 0;
-        this.intelligence = 0;
+    }
+
+    public HeroAttribute(double strength, double dexterity, double intelligence) {
+        this.strength = strength;
+        this.dexterity = dexterity;
+        this.intelligence = intelligence;
     }
 
     // method

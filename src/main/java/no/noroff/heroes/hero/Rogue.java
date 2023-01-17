@@ -6,6 +6,7 @@ import no.noroff.heroes.CustomException.InvalidWeaponType;
 import no.noroff.heroes.Slot;
 import no.noroff.heroes.equipment.Armor_type;
 import no.noroff.heroes.equipment.Weapon_type;
+import no.noroff.heroes.item.Armor;
 
 public class Rogue extends Hero{
 
@@ -42,63 +43,20 @@ public class Rogue extends Hero{
     }
 
     @Override
-    public void levelUp(double level_increase) {
-        level += level_increase;
-        double total_strength_Increase = (level_increase * strength_increase_each_level) + levelAttribute.getStrength();
-        double total_dexterity_Increase = (level_increase * dexterity_increase_each_level) + levelAttribute.getDexterity();
-        double total_intelligence_Increase = (level_increase * intelligence_increase_each_level) + levelAttribute.getIntelligence();
-
-        levelAttribute.setStrength(total_strength_Increase) ;
-        levelAttribute.setDexterity(total_dexterity_Increase);
-        levelAttribute.setIntelligence(total_intelligence_Increase);
-
-
-    }
-
-    @Override
     public void damage() {
         total_rogue_damage = WeaponDamage * (1+ (levelAttribute.getStrength()/100));
         System.out.println("total damage: " + total_rogue_damage);
-
     }
 
-    @Override
-    public String equip_armor(String armor_type, double armor_level) throws InvalidArmorType {
-        armor_attribute = armor_level;
 
-        for (String armor : Valid_Armor_type) {
-
-            if(armor.toUpperCase().equals(armor_type) && armor_level == level){
-
-                return "equipment: " + armor_type + " has been added to " + name;
-            }
-        }
-
-        throw new InvalidArmorType( armor_type + " cannot be used for " + this.getClass().getSimpleName() + " hero ");
-    }
 
     @Override
-    public String equip_weapon(String weapon_name, String weapon_type, double weapon_level) throws InvalidWeaponType, InvalidLevel {
-        //WeaponDamage += weapon_level;
-
-        for (String weapon : valid_Weapon_type) {
-            if (weapon.toLowerCase().equals(weapon_type) && weapon_level == level) {
-                System.out.println("weapon: " + weapon_name  + " has been added to " + name);
-                return "equipment: " + weapon_type + " has been added to " + name;
-            }
-            else if(weapon.toLowerCase().equals(weapon_type) && weapon_level != level){
-                throw new InvalidLevel(name);
-            }
-        }
-        throw new InvalidWeaponType(weapon_type,  this.getClass().getSimpleName());
-    }
-
-    @Override
-    public void totalAttributes() {
+    public double totalAttributes() {
         total_rogue_attribute = (levelAttribute.getStrength() +
                 levelAttribute.getDexterity() +
                 levelAttribute.getIntelligence()) +
                 (WeaponDamage + armor_attribute);
+        return total_rogue_attribute;
 
     }
 

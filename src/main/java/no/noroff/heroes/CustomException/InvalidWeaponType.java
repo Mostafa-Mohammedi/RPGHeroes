@@ -9,7 +9,4 @@ public class InvalidWeaponType extends Exception {
         super(weapon + " cannot be used for " + hero);
     }
 
-    public InvalidWeaponType(String message, Throwable cause) {
-        super(message, cause);
-    }
 }

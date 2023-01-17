@@ -10,11 +10,16 @@ public class Armor extends Item {
     Armor_type armorType;
     HeroAttribute armorAttribute;
 
+
     public Armor(String name, int requiredLevel, Slot slot, Armor_type armorType, HeroAttribute armorAttribute) {
         super(name, requiredLevel, slot);
         this.armorType = armorType;
         this.armorAttribute = armorAttribute;
     }
+
+
+
+
 
     //getter setter
 

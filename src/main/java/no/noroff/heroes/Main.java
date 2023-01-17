@@ -9,6 +9,7 @@ public class Main {
     public static void main(String[] args) {
 
 
+        /*
         Warrior mosti = new Warrior("mosti");
         try {
             mosti.equip_weapon("test sword", "swords", 1);
@@ -24,6 +25,8 @@ public class Main {
         } catch (InvalidArmorType e) {
             throw new RuntimeException(e);
         }
+
+         */
 
         /*
         mosti.totalAttributes();
