@@ -1,7 +1,7 @@
 import no.noroff.heroes.CustomException.InvalidArmorType;
 import no.noroff.heroes.CustomException.InvalidLevel;
 import no.noroff.heroes.CustomException.InvalidWeaponType;
-import no.noroff.heroes.HeroAttribute;
+import no.noroff.heroes.hero.HeroAttribute;
 import no.noroff.heroes.equipment.Armor_type;
 import no.noroff.heroes.equipment.Slot;
 import no.noroff.heroes.equipment.Weapon_type;
@@ -9,12 +9,21 @@ import no.noroff.heroes.hero.Hero;
 import no.noroff.heroes.hero.Warrior;
 import no.noroff.heroes.item.Armor;
 import no.noroff.heroes.item.Weapon;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class Test_Hero {
+    private Warrior warrior;
+
+    @BeforeEach
+    void init(){
+        // Arrange
+        warrior = new Warrior("Djengis Khan");
+
+    }
 
 
     @Test
@@ -22,7 +31,6 @@ class Test_Hero {
 
         //Arrange
 
-        Hero warrior = new Warrior("Djengis Khan");
 
         int warrior_level = 1;
         int warrior_levelIncrease = 2;
@@ -43,11 +51,7 @@ class Test_Hero {
     void Hero_strength_increase_each_level(){
 
         //Arrange
-
-        Hero warrior = new Warrior("Djengis Khan");
-
         int warrior_levelIncrease = 2;
-
         double  warrior_strength_increase_each_level = 3;
         double warrior_dexterity_increase_each_level = 2;
         double warrior_intelligence_increase_each_level = 1 ;
@@ -68,11 +72,7 @@ class Test_Hero {
     void Hero_dexterity_increase_each_level(){
 
         //Arrange
-
-        Hero warrior = new Warrior("Djengis Khan");
-
         int warrior_levelIncrease = 1;
-
         double  warrior_strength_increase_each_level = 3;
         double warrior_dexterity_increase_each_level = 2;
         double warrior_intelligence_increase_each_level = 1 ;
@@ -92,9 +92,6 @@ class Test_Hero {
     void Hero_intelligence_increase_each_level(){
 
         //Arrange
-
-        Hero warrior = new Warrior("Djengis Khan");
-
         int warrior_levelIncrease = 1;
 
         double  warrior_strength_increase_each_level = 3;
@@ -116,9 +113,6 @@ class Test_Hero {
     void calculate_hero_damage_with_no_equipment(){
 
         // Arrange
-
-        var warrior = new Warrior("Djengis Khan");
-
         warrior.damage();
         // Act
         double actual = warrior.getTotal_warrior_damage();
@@ -134,16 +128,13 @@ class Test_Hero {
 
     @Test
     void test_hero_damage_with_none_armor() throws InvalidLevel, InvalidWeaponType {
-
         // Arrange
-        var warrior = new Warrior("Djengis Khan");
-
         warrior.damage();
+
         // Act
         double actual = warrior.getTotal_warrior_damage();
 
         // Assert
-
         int weaponDamage = 1;
         double strength = warrior.getLevelAttribute().getStrength();
         double expected =  weaponDamage * (1 + ((strength)/ 100));
@@ -156,8 +147,6 @@ class Test_Hero {
     void test_hero_damage_with_one_armor() throws InvalidLevel, InvalidWeaponType, InvalidArmorType {
 
         // Arrange
-        var warrior = new Warrior("Djengis Khan");
-
         Armor plate = new Armor("Armor", 1, Slot.BODY, Armor_type.PLATE, new HeroAttribute(1,0,0));
 
         warrior.equip_armor(plate);
@@ -179,8 +168,6 @@ class Test_Hero {
     void test_hero_damage_with_two_armor() throws InvalidLevel, InvalidWeaponType, InvalidArmorType {
 
         // Arrange
-        var warrior = new Warrior("Djengis Khan");
-
         Armor plate = new Armor("Armor", 1, Slot.BODY, Armor_type.PLATE, new HeroAttribute(1,0,0));
         warrior.remove_armor(plate);
         Armor mail = new Armor("Armor", 1, Slot.BODY, Armor_type.MAIL, new HeroAttribute(5,0,0));
@@ -189,11 +176,11 @@ class Test_Hero {
         warrior.equip_armor(mail);
 
         warrior.damage();
+
         // Act
         double actual = warrior.getTotal_warrior_damage();
 
         // Assert
-
         int weaponDamage = 5;
         double strength = warrior.getLevelAttribute().getStrength();
         double expected =  weaponDamage * (1 + ((strength)/ 100));
@@ -207,8 +194,6 @@ class Test_Hero {
      void test_hero_damage_with_one_weapon() throws InvalidLevel, InvalidWeaponType {
 
         // Arrange
-        var warrior = new Warrior("Djengis Khan");
-
         Weapon sword = new Weapon("Sword", 1, Slot.WEAPON, 1, Weapon_type.SWORDS);
 
         warrior.equip_weapon(sword);
@@ -228,8 +213,6 @@ class Test_Hero {
     void test_hero_damage_with_replaced_weapon() throws InvalidLevel, InvalidWeaponType {
 
         // Arrange
-        var warrior = new Warrior("Djengis Khan");
-
         warrior.equip_weapon(new Weapon("Golden Hammer", 1, Slot.WEAPON, 5, Weapon_type.HAMMERS));
 
         warrior.equip_weapon(new Weapon("Golden HAxe", 1, Slot.WEAPON, 10, Weapon_type.AXES));
@@ -253,8 +236,6 @@ class Test_Hero {
     void test_hero_damage_with_one_weapon_armor_weapon() throws InvalidLevel, InvalidWeaponType, InvalidArmorType {
 
         // Arrange
-        var warrior = new Warrior("Djengis Khan");
-
         warrior.equip_weapon(new Weapon("Golden Hammer", 1, Slot.WEAPON, 5, Weapon_type.HAMMERS));
 
         warrior.equip_armor(new Armor("Plate", 1, Slot.BODY, Armor_type.PLATE, new HeroAttribute(10, 0,0)));
@@ -275,9 +256,6 @@ class Test_Hero {
     void Check_hero_display_state(){
 
         // Arrange
-
-        Warrior warrior = new Warrior("Gandhi");
-
         // Act
         String actual = warrior.display();
 

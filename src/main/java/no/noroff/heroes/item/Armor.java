@@ -2,7 +2,7 @@ package no.noroff.heroes.item;
 
 import no.noroff.heroes.equipment.Slot;
 import no.noroff.heroes.equipment.Armor_type;
-import no.noroff.heroes.HeroAttribute;
+import no.noroff.heroes.hero.HeroAttribute;
 
 public class Armor extends Item {
 

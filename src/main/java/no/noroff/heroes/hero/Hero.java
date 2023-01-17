@@ -5,13 +5,11 @@ import no.noroff.heroes.CustomException.InvalidLevel;
 import no.noroff.heroes.CustomException.InvalidWeaponType;
 import no.noroff.heroes.item.Item;
 import no.noroff.heroes.equipment.Slot;
-import no.noroff.heroes.HeroAttribute;
 import no.noroff.heroes.item.Armor;
 import no.noroff.heroes.item.Weapon;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Objects;
 
 
 /**
@@ -50,13 +48,7 @@ public abstract class Hero {
         return level;
     }
 
-    public double getWeapon_damage() {
-        return weapon_damage;
-    }
 
-    public double getArmor_attribute() {
-        return armor_attribute;
-    }
 
     public double getTotal_strength_Increase() {
         return total_strength_Increase;
@@ -74,9 +66,6 @@ public abstract class Hero {
         return levelAttribute;
     }
 
-    public HashMap<Slot, Item> getEquipment() {
-        return equipment;
-    }
 
     /**
      * Method for leveling up the hero and the heroes attribute.

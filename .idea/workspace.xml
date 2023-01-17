@@ -4,21 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8ed1e5e-b01b-43da-b653-eb4df5556550" name="Changes" comment="finished taking care of all the test">
+    <list default="true" id="b8ed1e5e-b01b-43da-b653-eb4df5556550" name="Changes" comment="Added the test for calculating the heroes total atributte.&#10;added test aswell for hero damage and display">
+      <change afterPath="$PROJECT_DIR$/src/main/java/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/CustomException/InvalidArmorType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/CustomException/InvalidArmorType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/CustomException/InvalidLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/CustomException/InvalidLevel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/CustomException/InvalidWeaponType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/CustomException/InvalidWeaponType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/HeroAttribute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/HeroAttribute.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/item/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/Slot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/equipment/Slot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/HeroAttribute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/HeroAttribute.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/Main.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Mage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Range.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Range.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Rogue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Warrior.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/item/Armor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/item/Armor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/item/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/item/Weapon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Equipment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Equipment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Test_Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test_Hero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Test_Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test_Item.java" afterDir="false" />
@@ -69,27 +61,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Java/RPGHeroes/src/test/java&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
+    "last_directory_selection": "C:/Java/RPGHeroes/src/test/java",
+    "last_opened_file_path": "C:/Java/RPGHeroes/src/main/java",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -99,7 +92,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Equipment">
+  <component name="RunManager" selected="Gradle.Tests in 'RPGHeroes.test'">
     <configuration name="Equipment" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -123,7 +116,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="Equipment.change_armor_check_total_attribute" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Equipment.equip_warrior_Two_armor" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -136,7 +129,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;Equipment.change_armor_check_total_attribute&quot;" />
+            <option value="&quot;Equipment.equip_warrior_Two_armor&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -169,29 +162,6 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="Test_Hero.Check_hero_display_state" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;Test_Hero.Check_hero_display_state&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="Test_Item" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -215,13 +185,34 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="Tests in 'RPGHeroes.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Tests in 'RPGHeroes.test'" />
         <item itemvalue="Gradle.Equipment" />
         <item itemvalue="Gradle.Test_Item" />
+        <item itemvalue="Gradle.Equipment.equip_warrior_Two_armor" />
         <item itemvalue="Gradle.Test_Hero" />
-        <item itemvalue="Gradle.Test_Hero.Check_hero_display_state" />
-        <item itemvalue="Gradle.Equipment.change_armor_check_total_attribute" />
       </list>
     </recent_temporary>
   </component>
@@ -249,7 +240,7 @@
       <workItem from="1673899390209" duration="5736000" />
       <workItem from="1673939333950" duration="1378000" />
       <workItem from="1673943697395" duration="9523000" />
-      <workItem from="1673968173423" duration="7279000" />
+      <workItem from="1673968173423" duration="10240000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.&#10;Added Readme.md file and wrote starting information about the hero class, attribute class and equipment class. added the hero class">
       <created>1673621694929</created>
@@ -363,7 +354,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673943857088</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Added the test for calculating the heroes total atributte.&#10;added test aswell for hero damage and display">
+      <created>1673987363873</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1673987363873</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,7 +395,8 @@
     <MESSAGE value="Added test for checking the weapon data and armor data" />
     <MESSAGE value="Added test for checking exception when equip the warrior with weapon." />
     <MESSAGE value="finished taking care of all the test" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished taking care of all the test" />
+    <MESSAGE value="Added the test for calculating the heroes total atributte.&#10;added test aswell for hero damage and display" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the test for calculating the heroes total atributte.&#10;added test aswell for hero damage and display" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
@@ -419,6 +418,7 @@
     <SUITE FILE_PATH="coverage/RPGHeroes$Main.ic" NAME="Main Coverage Results" MODIFIED="1673727464883" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>no.noroff.heroes.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/RPGHeroes$Tests_in__RPGHeroes_test_.ic" NAME="Tests in 'RPGHeroes.test' Coverage Results" MODIFIED="1673989778092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/RPGHeroes$WarriorTest_Hero_level_correct_level_increase.ic" NAME="WarriorTest.Hero_level_correct_level_increase Coverage Results" MODIFIED="1673790273601" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

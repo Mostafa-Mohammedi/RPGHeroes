@@ -1,24 +1,41 @@
-import no.noroff.heroes.HeroAttribute;
+import no.noroff.heroes.hero.HeroAttribute;
 import no.noroff.heroes.equipment.Slot;
 import no.noroff.heroes.equipment.Armor_type;
 import no.noroff.heroes.equipment.Weapon_type;
 import no.noroff.heroes.item.Armor;
 import no.noroff.heroes.item.Weapon;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class Test_Item {
-    @Test
-    void check_weapon_name_correct(){
+    private Weapon weapon;
+    private Armor armor;
+
+
+    @BeforeEach
+    void init(){
 
         // Arrange
-        var weapon = new Weapon("Bronx Axe",
+        weapon = new Weapon("Bronx Axe",
                 1,
                 Slot.WEAPON,
                 1,
                 Weapon_type.AXES);
- 
+
+        armor = new Armor("Bronx Plate",
+                1,
+                Slot.BODY,
+                Armor_type.PLATE,
+                new HeroAttribute(1,0,0));
+
+
+    }
+
+    @Test
+    void check_weapon_name_correct(){
+
         // Act
         String actual = weapon.get_weapon_name();
         // Assert
@@ -31,13 +48,6 @@ public class Test_Item {
 
     @Test
     void check_weapon_slot_name_correct(){
-
-        // Arrange
-        var weapon = new Weapon("Bronx Axe",
-                1,
-                Slot.WEAPON,
-                1,
-                Weapon_type.AXES);
         // Act
         String actual = weapon.get_slot().toLowerCase();
 
@@ -50,13 +60,6 @@ public class Test_Item {
 
     @Test
     void check_weapon_damage_correct(){
-
-        // Arrange
-        var weapon = new Weapon("Bronx Axe",
-                1,
-                Slot.WEAPON,
-                1,
-                Weapon_type.AXES);
         // Act
         int actual = weapon.getWeaponDamage();
 
@@ -72,13 +75,6 @@ public class Test_Item {
 
     @Test
     void check_weapon_type_correct(){
-
-        // Arrange
-        var weapon = new Weapon("Bronx Axe",
-                1,
-                Slot.WEAPON,
-                1,
-                Weapon_type.AXES);
         // Act
         String actual = weapon.getWeaponType().name().toLowerCase();
 
@@ -94,17 +90,7 @@ public class Test_Item {
     @Test
     void check_armor_name_correct(){
 
-        // Arrange
-
-        var armor = new Armor("Bronx Plate",
-                1,
-                Slot.BODY,
-                Armor_type.PLATE,
-                new HeroAttribute(1,0,0));
-
-
         // Act
-
         String expected = armor.get_armor_name().toLowerCase();
 
         // Assert
@@ -115,13 +101,6 @@ public class Test_Item {
 
     @Test
     void check_armor_level_correct(){
-
-        // Arrange
-        var armor = new Armor("Bronx Plate",
-                1,
-                Slot.BODY,
-                Armor_type.PLATE,
-                new HeroAttribute(1,0,0));
 
         // Act
 
@@ -136,13 +115,6 @@ public class Test_Item {
 
     @Test
     void check_armor_slot_correct(){
-
-        // Arrange
-        var armor = new Armor("Bronx Plate",
-                1,
-                Slot.BODY,
-                Armor_type.PLATE,
-                new HeroAttribute(1,0,0));
 
         // Act
         String actual = armor.get_slot().toLowerCase();

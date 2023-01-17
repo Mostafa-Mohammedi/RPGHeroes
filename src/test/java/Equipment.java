@@ -1,32 +1,88 @@
 import no.noroff.heroes.CustomException.InvalidArmorType;
 import no.noroff.heroes.CustomException.InvalidLevel;
 import no.noroff.heroes.CustomException.InvalidWeaponType;
-import no.noroff.heroes.HeroAttribute;
+import no.noroff.heroes.hero.HeroAttribute;
 import no.noroff.heroes.equipment.Slot;
 import no.noroff.heroes.equipment.Armor_type;
 import no.noroff.heroes.equipment.Weapon_type;
 import no.noroff.heroes.hero.Warrior;
 import no.noroff.heroes.item.Armor;
 import no.noroff.heroes.item.Weapon;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class Equipment {
-    @Test
-    void equip_warrior_weapon() throws InvalidLevel, InvalidWeaponType {
 
+    private Warrior warrior;
+    private Weapon sword;
+    private Weapon staff;
+
+    private Armor mail;
+    private Armor plate;
+
+    private Weapon invalid_level_sword;
+    private Armor invalid_type_cloth;
+
+    private Armor invalid_level_plate;
+
+    @BeforeEach
+    void init(){
         // Arrange
-        var sword  = new Weapon("legendary sword",
+
+        warrior = new Warrior("Djengis Khan");
+
+         sword  = new Weapon("legendary sword",
                 1,
                 Slot.WEAPON,
                 1,
                 Weapon_type.SWORDS);
 
-        var warrior = new Warrior("Djengis Khan");
+         staff = new Weapon("begynner staff",
+                1,
+                Slot.WEAPON,
+                1,
+                Weapon_type.STAFF);
 
-        // Act
+        mail = new Armor("beginner armor",
+                1,
+                Slot.BODY,
+                Armor_type.MAIL,
+                new HeroAttribute(1,0,0));
+
+
+        plate = new Armor("beginner armor",
+                1,
+                Slot.BODY,
+                Armor_type.PLATE,
+                new HeroAttribute(1,0,0));
+
+        invalid_level_sword = new Weapon("legendary sword",
+                2,
+                Slot.WEAPON,
+                1,
+                Weapon_type.SWORDS);
+
+
+        invalid_level_plate = new Armor("begynner armor",
+                2,
+                Slot.BODY,
+                Armor_type.PLATE,
+                new HeroAttribute(1,0,0));
+
+        invalid_type_cloth = new Armor("begyner armor",
+                2,
+                Slot.BODY,
+                Armor_type.CLOTH,
+                new HeroAttribute(1,0,0));
+
+    }
+    @Test
+    void equip_warrior_weapon() throws InvalidLevel, InvalidWeaponType {
+
+        // Arrange
         String actual = warrior.equip_weapon(sword);
 
         // Assert
@@ -37,21 +93,10 @@ public class Equipment {
 
     }
 
-
     @Test
     void equip_warrior_weapon_check_invalid_weapon_type() throws InvalidLevel, InvalidWeaponType {
-        // Arrange
-        var staff = new Weapon("begynner staff",
-                1,
-                Slot.WEAPON,
-                1,
-                Weapon_type.STAFF);
-
-
-        var warrior = new Warrior("Djengis Khan");
 
         // Act
-
         Exception exception = assertThrows(InvalidWeaponType.class, () -> {
             warrior.equip_weapon(staff);
         });
@@ -63,23 +108,13 @@ public class Equipment {
         assertEquals(expected, actual);
     }
 
-
     @Test
     void equip_warrior_weapon_check_InvalidLevel() throws InvalidLevel, InvalidWeaponType {
-
-        // Arrange
-        var sword = new Weapon("legendary sword",
-                3,
-                Slot.WEAPON,
-                1,
-                Weapon_type.SWORDS);
-
-        var warrior = new Warrior("Djengis Khan");
 
         // Act
 
         Exception exception = assertThrows(InvalidLevel.class, () -> {
-            warrior.equip_weapon(sword);
+            warrior.equip_weapon(invalid_level_sword);
         });
         String actual = exception.getMessage();
 
@@ -95,16 +130,7 @@ public class Equipment {
     @Test
     void equip_warrior_armor() throws InvalidLevel, InvalidWeaponType, InvalidArmorType {
 
-        // Arrange
-
-        var mail = new Armor("beginner armor",
-                1,
-                Slot.BODY,
-                Armor_type.MAIL,
-                new HeroAttribute(1,0,0));
-
         // Act
-        var warrior = new Warrior("Djengis khan");
         String expected = warrior.equip_armor(mail);
 
         // Assert
@@ -117,21 +143,10 @@ public class Equipment {
     @Test
     void equip_warrior_armor_check_invalid_armor_level() throws InvalidLevel, InvalidArmorType {
 
-        // Arrange
-        var staff = new Armor("begynner armor",
-                2,
-                Slot.BODY,
-                Armor_type.PLATE,
-                new HeroAttribute(1,0,0));
-
-
-
-        var warrior = new Warrior("Djengis Khan");
-
         // Act
 
         Exception exception  = assertThrows(InvalidLevel.class, () -> {
-            warrior.equip_armor(staff);
+            warrior.equip_armor(invalid_level_plate);
         });
         String actual = exception.getMessage();
 
@@ -146,21 +161,11 @@ public class Equipment {
     @Test
     void equip_warrior_armor_check_Invalid_armor_type() throws InvalidLevel, InvalidArmorType {
 
-        // Arrange
-
-        var cloth = new Armor("begyner armor",
-                2,
-                Slot.BODY,
-                Armor_type.CLOTH,
-                new HeroAttribute(1,0,0));
-
-        var warrior = new Warrior("Djengis Khan");
-
         // Act
         String actual = "cloth cannot be used for Warrior hero ";
 
         Exception exception = assertThrows(InvalidArmorType.class, () -> {
-            warrior.equip_armor(cloth);
+            warrior.equip_armor(invalid_type_cloth);
         });
         String expected = exception.getMessage();
 
@@ -170,18 +175,7 @@ public class Equipment {
 
     @Test
     void equip_warrior_one_armor() throws InvalidLevel, InvalidWeaponType, InvalidArmorType {
-
-        // Arrange
-
-        var mail = new Armor("beginner armor",
-                1,
-                Slot.BODY,
-                Armor_type.MAIL,
-                new HeroAttribute(1,0,0));
-
-
         // Act
-        var warrior = new Warrior("Djengis khan");
         warrior.equip_armor(mail);
 
         double expected = warrior.totalAttributes();
@@ -195,22 +189,7 @@ public class Equipment {
     @Test
     void equip_warrior_Two_armor() throws InvalidLevel, InvalidWeaponType, InvalidArmorType {
 
-        // Arrange
-
-        var mail = new Armor("beginner armor",
-                1,
-                Slot.BODY,
-                Armor_type.MAIL,
-                new HeroAttribute(1,0,0));
-
-        var plate = new Armor("beginner armor",
-                1,
-                Slot.BODY,
-                Armor_type.PLATE,
-                new HeroAttribute(1,0,0));
-
         // Act
-        var warrior = new Warrior("Djengis khan");
        warrior.equip_armor(mail);
         warrior.equip_armor(plate);
 
@@ -225,20 +204,6 @@ public class Equipment {
     @Test
     void change_armor_check_total_attribute() throws InvalidLevel, InvalidWeaponType, InvalidArmorType {
 
-        // Arrange
-
-        var mail = new Armor("beginner armor",
-                1,
-                Slot.BODY,
-                Armor_type.MAIL,
-                new HeroAttribute(1,0,0));
-
-        var plate = new Armor("beginner armor",
-                1,
-                Slot.BODY,
-                Armor_type.PLATE,
-                new HeroAttribute(1,0,0));
-
         // Act
         var warrior = new Warrior("Djengis khan");
         warrior.equip_armor(mail);
@@ -251,7 +216,5 @@ public class Equipment {
         double actual = 9;
         assertEquals(expected, actual);
     }
-
-
 
 }
