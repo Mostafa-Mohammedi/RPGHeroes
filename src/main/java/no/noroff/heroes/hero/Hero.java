@@ -13,7 +13,8 @@ import java.util.HashMap;
 
 
 /**
- * Abstract hero class to add main features all the main features for the heroes.
+ * Abstract hero class to add main features the heroes
+ *
  */
 public abstract class Hero {
     String name;
@@ -21,10 +22,10 @@ public abstract class Hero {
     double weapon_damage;
     double total_weapon_Damage;
     double armor_attribute;
-    double total_strength_Increase;
+    double total_strength_increase;
 
     double total_dexterity_Increase;
-    double total_intelligence_Increase;
+    double total_intelligence_increase;
 
     protected HeroAttribute levelAttribute;
     protected HashMap<Slot, Item> equipment;
@@ -39,7 +40,6 @@ public abstract class Hero {
         levelAttribute = new HeroAttribute();
     }
 
-
     public String getName() {
         return name;
     }
@@ -48,18 +48,16 @@ public abstract class Hero {
         return level;
     }
 
-
-
     public double getTotal_strength_Increase() {
-        return total_strength_Increase;
+        return total_strength_increase;
     }
 
     public double getTotal_dexterity_Increase() {
         return total_dexterity_Increase;
     }
 
-    public double getTotal_intelligence_Increase() {
-        return total_intelligence_Increase;
+    public double getTotal_intelligence_increase() {
+        return total_intelligence_increase;
     }
 
     public HeroAttribute getLevelAttribute() {
@@ -77,18 +75,15 @@ public abstract class Hero {
      */
     public int levelUp(double level_increase, double strength_increase_each_level, double dexterity_increase_each_level, double intelligence_increase_each_level) {
 
-         total_strength_Increase = (level_increase * strength_increase_each_level) + levelAttribute.getStrength();
+         total_strength_increase = (level_increase * strength_increase_each_level) + levelAttribute.getStrength();
          total_dexterity_Increase = (level_increase * dexterity_increase_each_level) + levelAttribute.getDexterity();
-         total_intelligence_Increase = (level_increase * intelligence_increase_each_level) + levelAttribute.getIntelligence();
+         total_intelligence_increase = (level_increase * intelligence_increase_each_level) + levelAttribute.getIntelligence();
 
-        levelAttribute.setStrength(total_strength_Increase) ;
+        levelAttribute.setStrength(total_strength_increase) ;
         levelAttribute.setDexterity(total_dexterity_Increase);
-        levelAttribute.setIntelligence(total_intelligence_Increase);
+        levelAttribute.setIntelligence(total_intelligence_increase);
 
-        level += level_increase;
-        System.out.println("total level increase: " + total_strength_Increase);
-
-        return level;
+        return level += level_increase;
     }
 
     /**
@@ -97,20 +92,18 @@ public abstract class Hero {
     public abstract void damage();
 
     /**
-     * method for equip armor for the hero
+     * method for equipping an armor to hero.
      * @param armor takes an instance of the armor class
      * @return return a string value confirming the new hero has been equipped
      * @throws InvalidArmorType throw a custom exception if the hero tries to equip wrong armor type
      * @throws InvalidLevel throw a custom exception if a hero tries to equip a armor that has a higher level then the hero level
      */
     public  String equip_armor(Armor armor) throws InvalidArmorType, InvalidLevel{
-        armor_attribute += armor.getArmorAttribute().getStrength();
-
         for (String equipment : Valid_Armor_type) {
 
             if(equipment.equalsIgnoreCase(armor.getArmorType().name()) && armor.get_armor_level() == level){
-
                 weapon_damage += armor.getArmorAttribute().getStrength();
+                armor_attribute += armor.getArmorAttribute().getStrength();
 
                 return "equipment: " + armor.getArmorType().name().toLowerCase() + " has been added to " + name;
             }
@@ -123,33 +116,28 @@ public abstract class Hero {
     }
 
     /**
-     * method for removing hero armor if he whant to change to a new hero
-     * @param armor takes a armor instance
+     * method for removing hero armor of hero
+     * @param armor takes an armor instance
      * @return return a string confirming that the armor has been removed
-     * @throws InvalidArmorType throw a custom exception if the hero tries to equip wrong armor type
-     * @throws InvalidLevel throw a custom exception if a hero tries to equip wrong armor type that has a new level then the hero level
      */
-    public  String remove_armor(Armor armor) throws InvalidArmorType, InvalidLevel {
+    public  String remove_armor(Armor armor) {
         armor_attribute -= armor.getArmorAttribute().getStrength();
         weapon_damage -= armor.getArmorAttribute().getStrength();
-
-
         return "item has been removed";
-
     }
 
     /**
-     * method for equipping a weapon for the hero.
-     * @param weapon
-     * @return a string confirming that the hero has been equip with a weapon
-     * @throws InvalidLevel a custom exception that the weapon level is to high
-     * @throws InvalidWeaponType a custom excetion that the hero tries to equip a wrong weapon type
+     * method for equipping a weapon to hero.
+     * add the attribute to hero for weapon damage
+     * @param weapon take  a weapon instance as a parameter to get acces to the attribute
+     * @return a string confirming that the hero has been equipped with a weapon
+     * @throws InvalidLevel a custom exception that the weapon level is too high
+     * @throws InvalidWeaponType a custom exception that the hero tries to equip a wrong weapon type
      */
     public String equip_weapon(Weapon weapon) throws InvalidLevel, InvalidWeaponType {
 
         for (String equipment : valid_Weapon_type) {
             if (equipment.equalsIgnoreCase(weapon.getWeaponType().name()) && weapon.get_weapon_level() == level) {
-                System.out.println("weapon: " + weapon.get_weapon_name() + " has been added to " + name);
                 weapon_damage += weapon.getWeaponDamage();
                 return name + " has been equip with " + weapon.get_weapon_name();
 
@@ -158,7 +146,6 @@ public abstract class Hero {
                 throw new InvalidLevel(name);
             }
         }
-
         throw new InvalidWeaponType(weapon.getWeaponType().name().toLowerCase(),  this.getClass().getSimpleName());
     }
 

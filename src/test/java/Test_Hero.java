@@ -5,7 +5,6 @@ import no.noroff.heroes.hero.HeroAttribute;
 import no.noroff.heroes.equipment.Armor_type;
 import no.noroff.heroes.equipment.Slot;
 import no.noroff.heroes.equipment.Weapon_type;
-import no.noroff.heroes.hero.Hero;
 import no.noroff.heroes.hero.Warrior;
 import no.noroff.heroes.item.Armor;
 import no.noroff.heroes.item.Weapon;
@@ -101,7 +100,7 @@ class Test_Hero {
 
         // Act
         warrior.levelUp(warrior_levelIncrease, warrior_strength_increase_each_level, warrior_dexterity_increase_each_level, warrior_intelligence_increase_each_level);
-        double actual = warrior.getTotal_intelligence_Increase();
+        double actual = warrior.getTotal_intelligence_increase();
 
         // Assert
         int expected = (int) (warrior.getLevelAttribute().getIntelligence());
@@ -115,7 +114,7 @@ class Test_Hero {
         // Arrange
         warrior.damage();
         // Act
-        double actual = warrior.getTotal_warrior_damage();
+        double actual = warrior.get_total_warrior_damage();
 
         // Assert
 
@@ -132,7 +131,7 @@ class Test_Hero {
         warrior.damage();
 
         // Act
-        double actual = warrior.getTotal_warrior_damage();
+        double actual = warrior.get_total_warrior_damage();
 
         // Assert
         int weaponDamage = 1;
@@ -152,7 +151,7 @@ class Test_Hero {
         warrior.equip_armor(plate);
         warrior.damage();
         // Act
-        double actual = warrior.getTotal_warrior_damage();
+        double actual = warrior.get_total_warrior_damage();
 
         // Assert
 
@@ -178,7 +177,7 @@ class Test_Hero {
         warrior.damage();
 
         // Act
-        double actual = warrior.getTotal_warrior_damage();
+        double actual = warrior.get_total_warrior_damage();
 
         // Assert
         int weaponDamage = 5;
@@ -199,7 +198,7 @@ class Test_Hero {
         warrior.equip_weapon(sword);
         warrior.damage();
         // Act
-        double actual = warrior.getTotal_warrior_damage();
+        double actual = warrior.get_total_warrior_damage();
 
         // Assert
 
@@ -242,7 +241,7 @@ class Test_Hero {
         // Act
         warrior.damage();
 
-        double actual = warrior.getTotal_warrior_damage();
+        double actual = warrior.get_total_warrior_damage();
         // Assert
 
         int weaponDamage = 15;
@@ -268,7 +267,7 @@ class Test_Hero {
                 " strength: " +  warrior.getLevelAttribute().getStrength() +
                 " dexterity: " + warrior.getLevelAttribute().getDexterity() +
                 " intelligence: " + warrior.getLevelAttribute().getIntelligence() +
-                " Damage " + warrior.getTotal_warrior_damage();
+                " Damage " + warrior.get_total_warrior_damage();
 
         assertEquals(expected, actual);
 

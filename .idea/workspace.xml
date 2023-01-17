@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8ed1e5e-b01b-43da-b653-eb4df5556550" name="Changes" comment="Added beforeach annotation and moved all mine instantiation in the method">
+    <list default="true" id="b8ed1e5e-b01b-43da-b653-eb4df5556550" name="Changes" comment="Added test coverage report in testing folder">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Hero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Warrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Equipment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Equipment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test_Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test_Hero.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +75,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Problems",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors",
@@ -208,10 +211,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.Tests in 'RPGHeroes.test'" />
-        <item itemvalue="Gradle.Equipment" />
         <item itemvalue="Gradle.Test_Item" />
-        <item itemvalue="Gradle.Equipment.equip_warrior_Two_armor" />
         <item itemvalue="Gradle.Test_Hero" />
+        <item itemvalue="Gradle.Equipment" />
+        <item itemvalue="Gradle.Equipment.equip_warrior_Two_armor" />
       </list>
     </recent_temporary>
   </component>
@@ -239,7 +242,7 @@
       <workItem from="1673899390209" duration="5736000" />
       <workItem from="1673939333950" duration="1378000" />
       <workItem from="1673943697395" duration="9523000" />
-      <workItem from="1673968173423" duration="10573000" />
+      <workItem from="1673968173423" duration="11852000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.&#10;Added Readme.md file and wrote starting information about the hero class, attribute class and equipment class. added the hero class">
       <created>1673621694929</created>
@@ -367,7 +370,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673990215405</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Added test coverage report in testing folder">
+      <created>1673990690353</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1673990690353</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -403,7 +413,8 @@
     <MESSAGE value="finished taking care of all the test" />
     <MESSAGE value="Added the test for calculating the heroes total atributte.&#10;added test aswell for hero damage and display" />
     <MESSAGE value="Added beforeach annotation and moved all mine instantiation in the method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added beforeach annotation and moved all mine instantiation in the method" />
+    <MESSAGE value="Added test coverage report in testing folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added test coverage report in testing folder" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

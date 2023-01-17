@@ -16,7 +16,6 @@ public class Warrior extends Hero {
     private double total_warrior_attribute;
     private double total_warrior_damage;
 
-
     //constructor
     public Warrior(String name) {
         super(name);
@@ -24,8 +23,8 @@ public class Warrior extends Hero {
         // level and name
         warrior_level = level = 1;
         warrior_name = name;
-        // attribute
 
+        // attribute
         levelAttribute.setStrength(5);
         levelAttribute.setDexterity(2);
         levelAttribute.setIntelligence(1);
@@ -52,13 +51,16 @@ public class Warrior extends Hero {
 
     }
 
-
-    //getter setter
-
+    //getter and setter
     public String getWarrior_name() {
         return warrior_name;
     }
 
+    public double get_total_warrior_damage() {
+        return total_warrior_damage;
+    }
+
+    // method
 
     @Override
     public void damage() {
@@ -69,13 +71,6 @@ public class Warrior extends Hero {
                 (1 + (levelAttribute.getStrength() / 100));
 
     }
-
-
-    public double getTotal_warrior_damage() {
-        return total_warrior_damage;
-    }
-
-    // method
 
     /**
      * Calculate total damage dealt to opponent
@@ -92,7 +87,6 @@ public class Warrior extends Hero {
                                     armor_attribute;
         return total_warrior_attribute;
 
-
     }
 
     @Override
@@ -108,6 +102,5 @@ public class Warrior extends Hero {
                 " intelligence: " + levelAttribute.getIntelligence() +
                 " Damage " + total_warrior_damage;
     }
-
 
 }

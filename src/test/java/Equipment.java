@@ -66,13 +66,13 @@ public class Equipment {
                 Weapon_type.SWORDS);
 
 
-        invalid_level_plate = new Armor("begynner armor",
+        invalid_level_plate = new Armor("beginner armor",
                 2,
                 Slot.BODY,
                 Armor_type.PLATE,
                 new HeroAttribute(1,0,0));
 
-        invalid_type_cloth = new Armor("begyner armor",
+        invalid_type_cloth = new Armor("beginner armor",
                 2,
                 Slot.BODY,
                 Armor_type.CLOTH,
@@ -92,7 +92,6 @@ public class Equipment {
 
 
     }
-
     @Test
     void equip_warrior_weapon_check_invalid_weapon_type() throws InvalidLevel, InvalidWeaponType {
 
@@ -109,7 +108,7 @@ public class Equipment {
     }
 
     @Test
-    void equip_warrior_weapon_check_InvalidLevel() throws InvalidLevel, InvalidWeaponType {
+    void equip_warrior_weapon_check_Invalid_Level() throws InvalidLevel, InvalidWeaponType {
 
         // Act
 
@@ -125,7 +124,6 @@ public class Equipment {
         assertEquals(expected, actual);
 
     }
-
 
     @Test
     void equip_warrior_armor() throws InvalidLevel, InvalidWeaponType, InvalidArmorType {
@@ -144,7 +142,6 @@ public class Equipment {
     void equip_warrior_armor_check_invalid_armor_level() throws InvalidLevel, InvalidArmorType {
 
         // Act
-
         Exception exception  = assertThrows(InvalidLevel.class, () -> {
             warrior.equip_armor(invalid_level_plate);
         });
@@ -154,7 +151,6 @@ public class Equipment {
         String expected = warrior.getWarrior_name() + " level is to low please use another weapon.";
 
         assertEquals(expected, actual);
-
 
     }
 
