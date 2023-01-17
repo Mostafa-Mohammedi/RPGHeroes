@@ -4,21 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8ed1e5e-b01b-43da-b653-eb4df5556550" name="Changes" comment="Added the test for calculating the heroes total atributte.&#10;added test aswell for hero damage and display">
-      <change afterPath="$PROJECT_DIR$/src/main/java/index.html" afterDir="false" />
+    <list default="true" id="b8ed1e5e-b01b-43da-b653-eb4df5556550" name="Changes" comment="Added beforeach annotation and moved all mine instantiation in the method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/HeroAttribute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/HeroAttribute.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/item/Armor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/item/Armor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Equipment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Equipment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Test_Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test_Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Test_Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test_Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/index.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="C:\Java\RPGHeroes\src\test\Test coverage report" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -71,7 +67,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "create.test.in.the.same.root": "true",
     "last_directory_selection": "C:/Java/RPGHeroes/src/test/java",
-    "last_opened_file_path": "C:/Java/RPGHeroes/src/main/java",
+    "last_opened_file_path": "C:/Java/RPGHeroes/src/test/Test coverage report",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -84,6 +80,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Java\RPGHeroes\src\main\java" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -240,7 +239,7 @@
       <workItem from="1673899390209" duration="5736000" />
       <workItem from="1673939333950" duration="1378000" />
       <workItem from="1673943697395" duration="9523000" />
-      <workItem from="1673968173423" duration="10240000" />
+      <workItem from="1673968173423" duration="10573000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.&#10;Added Readme.md file and wrote starting information about the hero class, attribute class and equipment class. added the hero class">
       <created>1673621694929</created>
@@ -361,7 +360,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673987363873</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Added beforeach annotation and moved all mine instantiation in the method">
+      <created>1673990215405</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1673990215405</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -396,7 +402,8 @@
     <MESSAGE value="Added test for checking exception when equip the warrior with weapon." />
     <MESSAGE value="finished taking care of all the test" />
     <MESSAGE value="Added the test for calculating the heroes total atributte.&#10;added test aswell for hero damage and display" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the test for calculating the heroes total atributte.&#10;added test aswell for hero damage and display" />
+    <MESSAGE value="Added beforeach annotation and moved all mine instantiation in the method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added beforeach annotation and moved all mine instantiation in the method" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
