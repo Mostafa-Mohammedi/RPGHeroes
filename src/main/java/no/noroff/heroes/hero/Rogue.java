@@ -1,30 +1,39 @@
 package no.noroff.heroes.hero;
-
-import no.noroff.heroes.CustomException.InvalidArmorType;
-import no.noroff.heroes.CustomException.InvalidLevel;
-import no.noroff.heroes.CustomException.InvalidWeaponType;
-import no.noroff.heroes.Slot;
+import no.noroff.heroes.equipment.Slot;
 import no.noroff.heroes.equipment.Armor_type;
 import no.noroff.heroes.equipment.Weapon_type;
-import no.noroff.heroes.item.Armor;
+import no.noroff.heroes.item.Weapon;
 
 public class Rogue extends Hero{
+    private final String warrior_name;
 
-    final private int strength_increase_each_level = 1;
-    final private int dexterity_increase_each_level = 4;
-    final private int intelligence_increase_each_level = 1;
+    private final double warrior_level;
+
+    final private double strength;
+    final private double dexterity;
+    final private double intelligence;
 
     private double total_rogue_attribute;
     private double total_rogue_damage;
 
     public Rogue(String name) {
         super(name);
-
-        // level
+        // level and name
+        warrior_level = level = 1;
+        warrior_name = name;
+        // attribute
 
         levelAttribute.setStrength(2);
         levelAttribute.setDexterity(6);
         levelAttribute.setIntelligence(1);
+
+
+        // get initial strength
+        strength = levelAttribute.getStrength();
+        dexterity = levelAttribute.getDexterity();
+        intelligence = levelAttribute.getIntelligence();
+
+
 
         // slot item
         equipment.put(Slot.HEAD, null);
@@ -42,20 +51,31 @@ public class Rogue extends Hero{
 
     }
 
-    @Override
-    public void damage() {
-        total_rogue_damage = WeaponDamage * (1+ (levelAttribute.getStrength()/100));
-        System.out.println("total damage: " + total_rogue_damage);
+
+    //getter and setter
+
+    public String getWarrior_name() {
+        return warrior_name;
     }
 
 
+    @Override
+    public void damage() {
+        if ( weapon_damage == 0) {
+            weapon_damage = 1;
+        }
+
+        total_weapon_Damage = weapon_damage * (1+ (levelAttribute.getDexterity()/100));
+        System.out.println("total damage: " + total_weapon_Damage);
+
+    }
 
     @Override
     public double totalAttributes() {
         total_rogue_attribute = (levelAttribute.getStrength() +
                 levelAttribute.getDexterity() +
                 levelAttribute.getIntelligence()) +
-                (WeaponDamage + armor_attribute);
+                armor_attribute;
         return total_rogue_attribute;
 
     }

@@ -2,7 +2,7 @@ import no.noroff.heroes.CustomException.InvalidArmorType;
 import no.noroff.heroes.CustomException.InvalidLevel;
 import no.noroff.heroes.CustomException.InvalidWeaponType;
 import no.noroff.heroes.HeroAttribute;
-import no.noroff.heroes.Slot;
+import no.noroff.heroes.equipment.Slot;
 import no.noroff.heroes.equipment.Armor_type;
 import no.noroff.heroes.equipment.Weapon_type;
 import no.noroff.heroes.hero.Warrior;
@@ -30,7 +30,7 @@ public class Equipment {
         String actual = warrior.equip_weapon(sword);
 
         // Assert
-        String expected = warrior.getName() + " has been equipt with " + sword.get_weapon_name();
+        String expected = warrior.getName() + " has been equip with " + sword.get_weapon_name();
 
         assertEquals(expected, actual);
 

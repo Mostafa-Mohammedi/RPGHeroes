@@ -1,31 +1,36 @@
 package no.noroff.heroes.hero;
-
-import no.noroff.heroes.CustomException.InvalidArmorType;
-import no.noroff.heroes.CustomException.InvalidLevel;
-import no.noroff.heroes.CustomException.InvalidWeaponType;
-import no.noroff.heroes.Slot;
+import no.noroff.heroes.equipment.Slot;
 import no.noroff.heroes.equipment.Armor_type;
 import no.noroff.heroes.equipment.Weapon_type;
-import no.noroff.heroes.item.Armor;
 
 public class Mage extends Hero{
-    final private int strength_increase_each_level = 1;
-    final private int dexterity_increase_each_level = 1;
-    final private int intelligence_increase_each_level = 5;
+    private final String warrior_name;
+    private final double warrior_level;
+
+    final private double strength;
+    final private double dexterity;
+    final private double intelligence;
+
 
     private double total_mage_attribute;
     private double total_mage_damage;
 
-
-
     public Mage(String name) {
         super(name);
-
-        // level
+        // level and name
+        warrior_level = level = 1;
+        warrior_name = name;
+        // attribute
 
         levelAttribute.setStrength(1);
         levelAttribute.setDexterity(1);
         levelAttribute.setIntelligence(8);
+
+        // get initial strength
+        strength = levelAttribute.getStrength();
+        dexterity = levelAttribute.getDexterity();
+        intelligence = levelAttribute.getIntelligence();
+
 
         // slot item
         equipment.put(Slot.HEAD, null);
@@ -42,14 +47,22 @@ public class Mage extends Hero{
 
     }
 
+    //getter setter
+
+    public String getWarrior_name() {
+        return warrior_name;
+    }
+
 
     @Override
     public void damage() {
-        total_mage_damage = WeaponDamage * (1+ (levelAttribute.getStrength()/100));
-        System.out.println("total damage: " + total_mage_damage);
+        if (weapon_damage == 0) {
+            weapon_damage = 1;
+        }
+        total_weapon_Damage = weapon_damage *
+                (1+ (levelAttribute.getIntelligence()/100));
 
     }
-
 
 
     @Override
@@ -58,7 +71,7 @@ public class Mage extends Hero{
         total_mage_attribute = (levelAttribute.getStrength() +
                 levelAttribute.getDexterity() +
                 levelAttribute.getIntelligence()) +
-                (armor_attribute);
+                armor_attribute;
         return total_mage_attribute;
     }
 

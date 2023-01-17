@@ -1,6 +1,6 @@
-package no.noroff.heroes;
+package no.noroff.heroes.item;
 
-import no.noroff.heroes.Slot;
+import no.noroff.heroes.equipment.Slot;
 
 public abstract class Item {
     protected String name;
@@ -17,11 +17,4 @@ public abstract class Item {
         this.slot = slot;
     }
 
-
-    // method
-
-    /**
-     * method for checking the required level for hero item
-     */
-    public abstract  void item_level (int requiredLevel);
 }

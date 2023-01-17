@@ -1,5 +1,5 @@
 import no.noroff.heroes.HeroAttribute;
-import no.noroff.heroes.Slot;
+import no.noroff.heroes.equipment.Slot;
 import no.noroff.heroes.equipment.Armor_type;
 import no.noroff.heroes.equipment.Weapon_type;
 import no.noroff.heroes.item.Armor;

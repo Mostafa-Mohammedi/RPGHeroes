@@ -2,9 +2,11 @@ package no.noroff.heroes.CustomException;
 
 public class InvalidWeaponType extends Exception {
 
-    public InvalidWeaponType() {
-    }
-
+    /**
+     * custom exception informing hero that he cannot use the weapon type
+     * @param weapon String value of weapon
+     * @param hero String value of hero
+     */
     public InvalidWeaponType(String weapon, String hero) {
         super(weapon + " cannot be used for " + hero);
     }

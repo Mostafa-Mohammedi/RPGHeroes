@@ -1,4 +1,4 @@
-package no.noroff.heroes;
+package no.noroff.heroes.equipment;
 
 public enum Slot {
         WEAPON,

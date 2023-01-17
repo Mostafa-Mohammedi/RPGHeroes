@@ -1,8 +1,7 @@
 package no.noroff.heroes.item;
 
-import no.noroff.heroes.Slot;
+import no.noroff.heroes.equipment.Slot;
 import no.noroff.heroes.equipment.Weapon_type;
-import no.noroff.heroes.Item;
 
 public class Weapon extends Item {
 
@@ -15,11 +14,9 @@ public class Weapon extends Item {
         this.weaponDamage = weaponDamage;
         this.weaponType = weaponType;
 
-        //super values
     }
 
-    // getter  setter
-
+    // getter and setter
     public int getWeaponDamage() {
         return weaponDamage;
     }
@@ -39,8 +36,4 @@ public class Weapon extends Item {
         return slot.name();
     }
 
-    @Override
-    public void item_level(int requiredLevel) {
-
-    }
 }

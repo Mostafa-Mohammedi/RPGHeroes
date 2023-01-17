@@ -1,9 +1,8 @@
 package no.noroff.heroes.item;
 
-import no.noroff.heroes.Slot;
+import no.noroff.heroes.equipment.Slot;
 import no.noroff.heroes.equipment.Armor_type;
 import no.noroff.heroes.HeroAttribute;
-import no.noroff.heroes.Item;
 
 public class Armor extends Item {
 
@@ -43,8 +42,4 @@ public class Armor extends Item {
         return slot.name();
     }
 
-    @Override
-    public void item_level(int requiredLevel) {
-
-    }
 }

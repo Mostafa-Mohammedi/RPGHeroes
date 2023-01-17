@@ -1,18 +1,17 @@
 package no.noroff.heroes.hero;
-
-import no.noroff.heroes.CustomException.InvalidArmorType;
-import no.noroff.heroes.CustomException.InvalidLevel;
-import no.noroff.heroes.CustomException.InvalidWeaponType;
-import no.noroff.heroes.Slot;
+import no.noroff.heroes.equipment.Slot;
 import no.noroff.heroes.equipment.Armor_type;
 import no.noroff.heroes.equipment.Weapon_type;
-import no.noroff.heroes.item.Armor;
 
 public class Range extends Hero {
 
-    final private int strength_increase_each_level = 1;
-    final private int dexterity_increase_each_level = 5;
-    final private int intelligence_increase_each_level = 1;
+    private final String warrior_name;
+    private final double warrior_level;
+
+    final private double strength;
+    final private double dexterity;
+    final private double intelligence;
+
 
     private double total_range_attribute;
     private double total_range_damage;
@@ -21,11 +20,19 @@ public class Range extends Hero {
     public Range(String name) {
         super(name);
 
-        // level
+        // level and name
+        warrior_level = level = 1;
+        warrior_name = name;
 
+        // level
         levelAttribute.setStrength(1);
         levelAttribute.setDexterity(7);
         levelAttribute.setIntelligence(1);
+
+        // get initial strength
+        strength = levelAttribute.getStrength();
+        dexterity = levelAttribute.getDexterity();
+        intelligence = levelAttribute.getIntelligence();
 
         // slot item
         equipment.put(Slot.HEAD, null);
@@ -42,22 +49,36 @@ public class Range extends Hero {
 
 
     }
-
-
-    @Override
-    public void damage() {
-        total_range_damage = WeaponDamage * (1+ (levelAttribute.getStrength()/100));
-        System.out.println("total damage: " + total_range_attribute);
-
+    // getter and setter
+    public String getWarrior_name() {
+        return warrior_name;
     }
 
 
     @Override
+    public void damage() {
+        if (weapon_damage == 0) {
+            weapon_damage = 1;
+        }
+        total_range_damage = weapon_damage * (1+ (levelAttribute.getDexterity()/100));
+        System.out.println("total damage: " + total_range_damage);
+    }
+
+
+
+    /**
+     * Calculate total damage dealt to opponent
+     * includes equip weapon attribute
+     * the completed damage is calculated in the total_warrior_damage variable
+     */
+
+    @Override
     public double totalAttributes() {
-        total_range_attribute = (levelAttribute.getStrength() +
+        total_range_attribute = (
+                levelAttribute.getStrength() +
                 levelAttribute.getDexterity() +
                 levelAttribute.getIntelligence()) +
-                (WeaponDamage + armor_attribute);
+                armor_attribute;
         return total_range_attribute;
     }
 
