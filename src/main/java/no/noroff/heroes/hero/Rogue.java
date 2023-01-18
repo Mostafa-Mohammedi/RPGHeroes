@@ -42,12 +42,12 @@ public class Rogue extends Hero{
         equipment.put(Slot.LEGS, null);
 
         // valid weapon type
-        valid_Weapon_type.add(Weapon_type.DAGGERS.name());
-        valid_Weapon_type.add(Weapon_type.SWORDS.name());
+        valid_Weapon_type.add(Weapon_type.DAGGERS);
+        valid_Weapon_type.add(Weapon_type.SWORDS);
 
         // valid armor type
-        Valid_Armor_type.add(Armor_type.LEATHER.name());
-        Valid_Armor_type.add(Armor_type.MAIL.name());
+        Valid_Armor_type.add(Armor_type.LEATHER);
+        Valid_Armor_type.add(Armor_type.MAIL);
 
     }
 

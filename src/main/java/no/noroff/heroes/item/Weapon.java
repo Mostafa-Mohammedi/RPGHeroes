@@ -13,7 +13,8 @@ public class Weapon extends Item {
         super(name, requiredLevel, slot);
         this.weaponDamage = weaponDamage;
         this.weaponType = weaponType;
-
+        weapon_type = weaponType;
+        weapon_damage = weaponDamage;
     }
 
     // getter and setter

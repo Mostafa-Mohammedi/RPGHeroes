@@ -41,13 +41,13 @@ public class Warrior extends Hero {
         equipment.put(Slot.LEGS, null);
 
         // valid weapon type
-        valid_Weapon_type.add(Weapon_type.AXES.name());
-        valid_Weapon_type.add(Weapon_type.HAMMERS.name());
-        valid_Weapon_type.add(Weapon_type.SWORDS.name());
+        valid_Weapon_type.add(Weapon_type.AXES);
+        valid_Weapon_type.add(Weapon_type.HAMMERS);
+        valid_Weapon_type.add(Weapon_type.SWORDS);
 
         // valid armor type
-        Valid_Armor_type.add(Armor_type.MAIL.name());
-        Valid_Armor_type.add(Armor_type.PLATE.name());
+        Valid_Armor_type.add(Armor_type.MAIL);
+        Valid_Armor_type.add(Armor_type.PLATE);
 
     }
 

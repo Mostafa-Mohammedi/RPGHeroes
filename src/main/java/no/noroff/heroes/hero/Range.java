@@ -41,11 +41,11 @@ public class Range extends Hero {
         equipment.put(Slot.LEGS, null);
 
         // valid weapon type
-        valid_Weapon_type.add(Weapon_type.BOWS.name());
+        valid_Weapon_type.add(Weapon_type.BOWS);
 
         // valid armor type
-        Valid_Armor_type.add(Armor_type.LEATHER.name());
-        Valid_Armor_type.add(Armor_type.MAIL.name());
+        Valid_Armor_type.add(Armor_type.LEATHER);
+        Valid_Armor_type.add(Armor_type.MAIL);
 
 
     }

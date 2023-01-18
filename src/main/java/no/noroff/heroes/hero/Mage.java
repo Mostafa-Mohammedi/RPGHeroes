@@ -39,11 +39,11 @@ public class Mage extends Hero{
         equipment.put(Slot.LEGS, null);
 
         // valid weapon type
-        valid_Weapon_type.add(Weapon_type.STAFF.name());
-        valid_Weapon_type.add(Weapon_type.WANDS.name());
+        valid_Weapon_type.add(Weapon_type.STAFF);
+        valid_Weapon_type.add(Weapon_type.WANDS);
 
         // valid armor type
-        Valid_Armor_type.add(Armor_type.CLOTH.name());
+        Valid_Armor_type.add(Armor_type.CLOTH);
 
     }
 
