@@ -1,11 +1,10 @@
 import no.noroff.heroes.CustomException.InvalidArmorType;
 import no.noroff.heroes.CustomException.InvalidLevel;
 import no.noroff.heroes.CustomException.InvalidWeaponType;
-import no.noroff.heroes.hero.HeroAttribute;
+import no.noroff.heroes.hero.*;
 import no.noroff.heroes.equipment.Armor_type;
 import no.noroff.heroes.equipment.Slot;
 import no.noroff.heroes.equipment.Weapon_type;
-import no.noroff.heroes.hero.Warrior;
 import no.noroff.heroes.item.Armor;
 import no.noroff.heroes.item.Weapon;
 import org.junit.jupiter.api.BeforeEach;
@@ -16,12 +15,241 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class Test_Hero {
     private Warrior warrior;
+    private Mage merlin;
+    private Range robin;
+    private Rogue hitman;
+
 
     @BeforeEach
     void init(){
         // Arrange
         warrior = new Warrior("Djengis Khan");
+        merlin = new Mage("Merlin");
+        robin = new Range("Robin Hood");
+        hitman = new Rogue("Punisher");
 
+    }
+
+
+    @Test
+    void Create_warrior_check_name(){
+
+        // Act
+        String  actual = warrior.getWarrior_name();
+
+        // Assert
+        String expected = "Djengis Khan";
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void Create_warrior_check_level(){
+
+        // Act
+        int  actual = warrior.getLevel();
+
+        // Assert
+        int expected = 1;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void Create_warrior_check_level_attribute_strength(){
+
+        // Act
+        double actual = warrior.getLevelAttribute().getStrength();
+
+        // Assert
+        double expected = 5;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void Create_warrior_check_level_attribute_dexterity(){
+
+        // Act
+        double actual = warrior.getLevelAttribute().getDexterity();
+
+        // Assert
+        double expected = 2;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void Create_warrior_check_level_attribute_intelligence(){
+
+        // Act
+        double actual = warrior.getLevelAttribute().getIntelligence();
+
+        // Assert
+        double expected = 1;
+        assertEquals(expected, actual);
+    }
+
+
+
+    @Test
+    void Create_mage_check_name(){
+
+        // Act
+        String  actual = merlin.getWarrior_name();
+
+        // Assert
+        String expected = "Merlin";
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void Create_mage_check_level(){
+
+        // Act
+        int  actual = merlin.getLevel();
+
+        // Assert
+        int expected = 1;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void Create_mage_check_level_attribute_strength(){
+
+        // Act
+        double actual = merlin.getLevelAttribute().getStrength();
+
+        // Assert
+        double expected = 1;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void Create_mage_check_level_attribute_dexterity(){
+
+        // Act
+        double actual = merlin.getLevelAttribute().getDexterity();
+
+        // Assert
+        double expected = 1;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void Create_mage_check_level_attribute_intelligence(){
+
+        // Act
+        double actual = merlin.getLevelAttribute().getIntelligence();
+
+        // Assert
+        double expected = 8;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void Create_rogue_check_name(){
+
+        // Act
+        String  actual = hitman.getWarrior_name();
+
+        // Assert
+        String expected = "Punisher";
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void Create_rogue_check_level(){
+
+        // Act
+        int  actual = hitman.getLevel();
+
+        // Assert
+        int expected = 1;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void Create_rogue_check_level_attribute_strength(){
+
+        // Act
+        double actual = hitman.getLevelAttribute().getStrength();
+
+        // Assert
+        double expected = 2;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void Create_rogue_check_level_attribute_dexterity(){
+
+        // Act
+        double actual = hitman.getLevelAttribute().getDexterity();
+
+        // Assert
+        double expected = 6;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void Create_rogue_check_level_attribute_intelligence(){
+
+        // Act
+        double actual = hitman.getLevelAttribute().getIntelligence();
+
+        // Assert
+        double expected = 1;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void Create_range_check_name(){
+
+        // Act
+        String  actual = robin.getWarrior_name();
+
+        // Assert
+        String expected = "Robin Hood";
+        assertEquals(expected, actual);
+    }
+    @Test
+    void Create_range_check_level(){
+
+        // Act
+        int  actual = robin.getLevel();
+
+        // Assert
+        int expected = 1;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void Create_range_check_level_attribute_strength(){
+
+        // Act
+        double actual = robin.getLevelAttribute().getStrength();
+
+        // Assert
+        double expected = 1;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void Create_robin_check_level_attribute_dexterity(){
+
+        // Act
+        double actual = robin.getLevelAttribute().getDexterity();
+
+        // Assert
+        double expected = 7;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void Create_robin_check_level_attribute_intelligence(){
+
+        // Act
+        double actual = robin.getLevelAttribute().getIntelligence();
+
+        // Assert
+        double expected = 1;
+        assertEquals(expected, actual);
     }
 
 
@@ -29,8 +257,6 @@ class Test_Hero {
     void Hero__level_increase_new_level(){
 
         //Arrange
-
-
         int warrior_level = 1;
         int warrior_levelIncrease = 2;
 

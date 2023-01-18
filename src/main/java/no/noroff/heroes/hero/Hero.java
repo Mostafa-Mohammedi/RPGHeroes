@@ -3,10 +3,11 @@ package no.noroff.heroes.hero;
 import no.noroff.heroes.CustomException.InvalidArmorType;
 import no.noroff.heroes.CustomException.InvalidLevel;
 import no.noroff.heroes.CustomException.InvalidWeaponType;
+import no.noroff.heroes.equipment.Armor_type;
+import no.noroff.heroes.equipment.Weapon_type;
 import no.noroff.heroes.item.Item;
 import no.noroff.heroes.equipment.Slot;
-import no.noroff.heroes.item.Armor;
-import no.noroff.heroes.item.Weapon;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -29,14 +30,14 @@ public abstract class Hero {
 
     protected HeroAttribute levelAttribute;
     protected HashMap<Slot, Item> equipment;
-    ArrayList<String> valid_Weapon_type;
-    ArrayList<String> Valid_Armor_type;
+    ArrayList<Weapon_type> valid_Weapon_type;
+    ArrayList<Armor_type> Valid_Armor_type;
 
     public Hero(String name) {
         this.name = name;
         equipment = new HashMap<Slot, Item>();
-        valid_Weapon_type = new ArrayList<String>();
-        Valid_Armor_type = new ArrayList<String>();
+        valid_Weapon_type = new ArrayList<Weapon_type>();
+        Valid_Armor_type = new ArrayList<Armor_type>();
         levelAttribute = new HeroAttribute();
     }
 
@@ -98,21 +99,23 @@ public abstract class Hero {
      * @throws InvalidArmorType throw a custom exception if the hero tries to equip wrong armor type
      * @throws InvalidLevel throw a custom exception if a hero tries to equip a armor that has a higher level then the hero level
      */
-    public  String equip_armor(Armor armor) throws InvalidArmorType, InvalidLevel{
-        for (String equipment : Valid_Armor_type) {
+    public  String equip_armor(Item armor) throws InvalidArmorType, InvalidLevel{
+        for (Armor_type equipment_armor : Valid_Armor_type) {
 
-            if(equipment.equalsIgnoreCase(armor.getArmorType().name()) && armor.get_armor_level() == level){
-                weapon_damage += armor.getArmorAttribute().getStrength();
-                armor_attribute += armor.getArmorAttribute().getStrength();
+            if(equipment_armor.equals(armor.getArmor_type()) && armor.getRequiredLevel() == level){
+                weapon_damage += armor.getArmor_attribute().getStrength();
+                armor_attribute += armor.getArmor_attribute().getStrength();
+                equipment.replace(armor.getSlot(), armor);
+                System.out.println("testing armor: " + equipment);
 
-                return "equipment: " + armor.getArmorType().name().toLowerCase() + " has been added to " + name;
+                return "equipment: " + armor.getArmor_type().name().toLowerCase() + " has been added to " + name;
             }
-            else if (equipment.equalsIgnoreCase(armor.getArmorType().name()) && armor.get_armor_level() != level){
+            else if (equipment_armor.equals(armor.getArmor_type()) && armor.getRequiredLevel() != level){
                 throw new InvalidLevel(name);
             }
         }
 
-        throw new InvalidArmorType( armor.getArmorType().name().toLowerCase() + " cannot be used for " + this.getClass().getSimpleName() + " hero ");
+        throw new InvalidArmorType( armor.getArmor_type().name().toLowerCase() + " cannot be used for " + this.getClass().getSimpleName() + " hero ");
     }
 
     /**
@@ -120,12 +123,11 @@ public abstract class Hero {
      * @param armor takes an armor instance
      * @return return a string confirming that the armor has been removed
      */
-    public  String remove_armor(Armor armor) {
-        armor_attribute -= armor.getArmorAttribute().getStrength();
-        weapon_damage -= armor.getArmorAttribute().getStrength();
+    public  String remove_armor(Item armor) {
+        armor_attribute -= armor.getArmor_attribute().getStrength();
+        weapon_damage -= armor.getArmor_attribute().getStrength();
         return "item has been removed";
     }
-
     /**
      * method for equipping a weapon to hero.
      * add the attribute to hero for weapon damage
@@ -134,19 +136,21 @@ public abstract class Hero {
      * @throws InvalidLevel a custom exception that the weapon level is too high
      * @throws InvalidWeaponType a custom exception that the hero tries to equip a wrong weapon type
      */
-    public String equip_weapon(Weapon weapon) throws InvalidLevel, InvalidWeaponType {
+    public String equip_weapon(Item weapon) throws InvalidLevel, InvalidWeaponType {
 
-        for (String equipment : valid_Weapon_type) {
-            if (equipment.equalsIgnoreCase(weapon.getWeaponType().name()) && weapon.get_weapon_level() == level) {
-                weapon_damage += weapon.getWeaponDamage();
-                return name + " has been equip with " + weapon.get_weapon_name();
 
-            }
-            else if(equipment.equalsIgnoreCase(weapon.getWeaponType().name()) && weapon.get_weapon_level() != level){
+        for (Weapon_type equipments : valid_Weapon_type) {
+            if (equipments.equals(weapon.getWeapon_type()) && weapon.getRequiredLevel() == level) {
+                weapon_damage += weapon.getWeapon_damage();
+                equipment.replace(weapon.getSlot(), weapon);
+                System.out.println("testing hashmaps: " + equipment);
+                return name + " has been equip with " + weapon.getName();
+
+            } else if (equipments.equals(weapon.getWeapon_type()) && weapon.getRequiredLevel() != level) {
                 throw new InvalidLevel(name);
             }
         }
-        throw new InvalidWeaponType(weapon.getWeaponType().name().toLowerCase(),  this.getClass().getSimpleName());
+        throw new InvalidWeaponType(weapon.getWeapon_type().name().toLowerCase(),  this.getClass().getSimpleName());
     }
 
     /**
