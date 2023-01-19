@@ -6,6 +6,8 @@ import no.noroff.heroes.item.Weapon;
 
 /**
  * Rogue class is used for creating rogue class
+ * @author Mostafa Mohammedi
+
  */
 public class Rogue extends Hero{
     private final String warrior_name;
@@ -68,15 +70,6 @@ public class Rogue extends Hero{
 
     }
 
-    @Override
-    public double totalAttributes() {
-        total_rogue_attribute = (levelAttribute.getStrength() +
-                levelAttribute.getDexterity() +
-                levelAttribute.getIntelligence()) +
-                armor_attribute;
-        return total_rogue_attribute;
-
-    }
 
     @Override
     public String display() {

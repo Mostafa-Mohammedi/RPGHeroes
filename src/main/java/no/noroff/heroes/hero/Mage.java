@@ -5,6 +5,7 @@ import no.noroff.heroes.equipment.Weapon_type;
 
 /**
  * Mage class is used to initialize a mage hero
+ * @author Mostafa Mohammedi
  */
 public class Mage extends Hero{
     private final String warrior_name;
@@ -64,16 +65,6 @@ public class Mage extends Hero{
 
     }
 
-
-    @Override
-    public double totalAttributes() {
-
-        total_mage_attribute = (levelAttribute.getStrength() +
-                levelAttribute.getDexterity() +
-                levelAttribute.getIntelligence()) +
-                armor_attribute;
-        return total_mage_attribute;
-    }
 
     @Override
     public String display() {

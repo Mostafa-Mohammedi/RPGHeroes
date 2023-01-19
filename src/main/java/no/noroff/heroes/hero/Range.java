@@ -5,6 +5,7 @@ import no.noroff.heroes.equipment.Weapon_type;
 
 /**
  * Range class is used for creating a Range hero
+ * @author Mostafa Mohammedi
  */
 public class Range extends Hero {
 
@@ -14,9 +15,6 @@ public class Range extends Hero {
     final private double strength;
     final private double dexterity;
     final private double intelligence;
-
-
-    private double total_range_attribute;
     private double total_range_damage;
 
 
@@ -64,23 +62,6 @@ public class Range extends Hero {
         System.out.println("total damage: " + total_range_damage);
     }
 
-
-
-    /**
-     * Calculate total damage dealt to opponent
-     * includes equip weapon attribute
-     * the completed damage is calculated in the total_warrior_damage variable
-     */
-
-    @Override
-    public double totalAttributes() {
-        total_range_attribute = (
-                levelAttribute.getStrength() +
-                levelAttribute.getDexterity() +
-                levelAttribute.getIntelligence()) +
-                armor_attribute;
-        return total_range_attribute;
-    }
 
     @Override
     public String display() {

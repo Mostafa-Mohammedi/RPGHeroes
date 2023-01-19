@@ -8,11 +8,13 @@ import no.noroff.heroes.item.Item;
 import no.noroff.heroes.equipment.Slot;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 
 /**
  * Abstract hero class to add main features the heroes
- *
+ * @author Mostafa Mohammedi
+
  */
 public abstract class Hero {
     String name;
@@ -152,10 +154,24 @@ public abstract class Hero {
     }
 
     /**
-     * method for calculating the total hero attribute that consist of strength dexterity and intelligence
-     * @return a value that contains the heroes total attribute
+     * method for calculating the total hero attribute that consist of strength dexterity and intelligence including armor
+     * @return a new instance of the hero attribute
      */
-    public abstract double totalAttributes();
+    public HeroAttribute  totalAttributes(){
+        double totalStrength = levelAttribute.getStrength();
+        double totalDexterity = levelAttribute.getDexterity();
+        double totalIntelligence = levelAttribute.getIntelligence();
+
+        for (Map.Entry<Slot, Item> set : equipment.entrySet()) {
+            if (!set.getKey().equals(Slot.WEAPON) && set.getValue() != null) {
+                totalStrength += set.getValue().getArmor_attribute().getStrength();
+                totalDexterity += set.getValue().getArmor_attribute().getDexterity();
+                totalIntelligence += set.getValue().getArmor_attribute().getIntelligence();
+            }
+        }
+        return new HeroAttribute(totalStrength, totalDexterity, totalIntelligence);
+
+    }
 
     /**
      * Method for showing the heroes state
@@ -163,5 +179,7 @@ public abstract class Hero {
      */
 
     public abstract String display();
+
+
 
 }

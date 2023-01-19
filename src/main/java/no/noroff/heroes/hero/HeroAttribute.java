@@ -2,6 +2,7 @@ package no.noroff.heroes.hero;
 
 /**
  * Hero attribute class is used for adding the initial hero attribute
+ * @author Mostafa Mohammedi
  */
 public class HeroAttribute {
     private double strength;
@@ -21,7 +22,7 @@ public class HeroAttribute {
      * @param dexterity double value for dexterity
      * @param intelligence double value for intelligence
      */
-    public HeroAttribute(int strength, double dexterity, double intelligence) {
+    public HeroAttribute(double strength, double dexterity, double intelligence) {
         this.strength = strength;
         this.dexterity = dexterity;
         this.intelligence = intelligence;

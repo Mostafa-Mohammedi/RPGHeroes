@@ -6,6 +6,7 @@ import no.noroff.heroes.equipment.Weapon_type;
 
 /**
  * Warrior class is used for creating a warrior hero
+ * @author Mostafa Mohammedi
  */
 public class Warrior extends Hero {
     private final String warrior_name;
@@ -72,23 +73,6 @@ public class Warrior extends Hero {
         }
         total_warrior_damage = weapon_damage *
                 (1 + (levelAttribute.getStrength() / 100));
-
-    }
-
-    /**
-     * Calculate total damage dealt to opponent
-     * includes equip weapon attribute
-     * the completed damage is calculated in the total_warrior_damage variable
-     */
-
-    @Override
-    public double totalAttributes() {
-
-        total_warrior_attribute = (levelAttribute.getStrength() +
-                                    levelAttribute.getDexterity() +
-                                    levelAttribute.getIntelligence()) +
-                                    armor_attribute;
-        return total_warrior_attribute;
 
     }
 

@@ -169,29 +169,59 @@ public class Equipment {
     }
 
     @Test
-    void equip_warrior_one_armor() throws InvalidLevel, InvalidWeaponType, InvalidArmorType {
+    void equip_warrior_one_armor_getStrength() throws InvalidLevel, InvalidWeaponType, InvalidArmorType {
         // Act
         warrior.equip_armor(mail);
 
-        double expected = warrior.totalAttributes();
+        double expected = warrior.totalAttributes().getStrength();
 
         // Assert
-        double actual = 9;
+        double actual = 6;
 
         assertEquals(expected, actual);
     }
 
     @Test
+    void equip_warrior_one_armor_getDexterity() throws InvalidLevel, InvalidWeaponType, InvalidArmorType {
+
+        // Act
+        warrior.equip_armor(mail);
+
+        double expected = warrior.totalAttributes().getDexterity();
+
+        // Assert
+        double actual = 2;
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void equip_warrior_one_armor_getIntelligence() throws InvalidLevel, InvalidWeaponType, InvalidArmorType {
+
+        // Act
+        warrior.equip_armor(mail);
+
+        double expected = warrior.totalAttributes().getIntelligence();
+
+        // Assert
+        double actual = 1;
+
+        assertEquals(expected, actual);
+    }
+
+
+
+    @Test
     void equip_warrior_Two_armor() throws InvalidLevel, InvalidWeaponType, InvalidArmorType {
 
         // Act
-       warrior.equip_armor(mail);
+       warrior.equip_weapon(sword);
         warrior.equip_armor(plate);
 
-        double expected = warrior.totalAttributes();
+        double expected = warrior.totalAttributes().getStrength();
 
         // Assert
-        double actual = 10;
+        double actual = 6;
 
         assertEquals(expected, actual);
     }
@@ -205,10 +235,10 @@ public class Equipment {
         warrior.remove_armor(mail);
         warrior.equip_armor(plate);
 
-        double expected = warrior.totalAttributes();
+        double expected = warrior.totalAttributes().getStrength();
 
         // Assert
-        double actual = 9;
+        double actual = 6;
         assertEquals(expected, actual);
     }
 

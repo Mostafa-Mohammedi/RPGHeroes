@@ -1,5 +1,8 @@
 package no.noroff.heroes.CustomException;
 
+/**
+ * Custom exception class for hero if he wants to equip a weapon that he cannot use
+ */
 public class InvalidWeaponType extends Exception {
 
     /**
