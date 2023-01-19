@@ -22,30 +22,28 @@ Every hero start at level 1 and initial hero attribute example:
 
 The Console app will contain following character:
 
-* Test_Hero Abstract class
+* Hero Abstract class
 
 
 * Contains the heroes name and characteristic
 
-  * Mage class extends from Character class 
-  * Ranger class extends from Character class
-  * Rogue class extends from Character class
-  * Warrior class extends from Character class
+  * Mage class extends from Hero class 
+  * Ranger class extends from hero class
+  * Rogue class extends from hero class
+  * Warrior class extends from hero class
 
 
-* Test_Hero Attributes class
-  * Contains a hashmap of heroes statics 
-
+* Hero Attributes class
+  * Add the hero strength, dexterity and intelligence
 
 * Items abstract class
-  * Weapons
-  * Armor
+  * Weapon extends from Item class
+  * Armor extends from Item class
 
 
 ## Class diagram
 
-![img_1.png](img_1.png)
-
+![img.png](img.png)
 
 
 * Every Test_Hero type will extend several Method from the Test_Hero class
@@ -54,7 +52,7 @@ The Console app will contain following character:
   * Damage: is the damage a hero deals 
   * equip_armor: method to equip the armor of the hero
   * equip_weapon: method to equip a weapon to the hero
-  * totalAttribtues: the total level of the hero including the heroes stats
+  * totalAttributes: the total level of the hero including the heroes stats
   * display: the total state of the hero including their name and class
   
 

@@ -10,36 +10,39 @@ import no.noroff.heroes.item.Armor;
 import no.noroff.heroes.item.Weapon;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class Equipment {
+import static org.junit.jupiter.api.Assertions.*;
+
+public class ItemTest {
 
     private Warrior warrior;
     private Weapon sword;
     private Weapon staff;
 
-    private Armor mail;
-    private Armor plate;
+    private Weapon axe;
 
     private Weapon invalid_level_sword;
+
+    private Armor mail;
+    private Armor plate;
     private Armor invalid_type_cloth;
 
     private Armor invalid_level_plate;
 
+
     @BeforeEach
     void init(){
-        // Arrange
+
 
         warrior = new Warrior("Djengis Khan");
 
-         sword  = new Weapon("legendary sword",
+        sword  = new Weapon("legendary sword",
                 1,
                 Slot.WEAPON,
                 1,
                 Weapon_type.SWORDS);
 
-         staff = new Weapon("begynner staff",
+        staff = new Weapon("begynner staff",
                 1,
                 Slot.WEAPON,
                 1,
@@ -77,7 +80,114 @@ public class Equipment {
                 Armor_type.CLOTH,
                 new HeroAttribute(1,0,0));
 
+        // Arrange
+        axe = new Weapon("Bronx Axe",
+                1,
+                Slot.WEAPON,
+                1,
+                Weapon_type.AXES);
+
+        plate = new Armor("Bronx Plate",
+                1,
+                Slot.BODY,
+                Armor_type.PLATE,
+                new HeroAttribute(1,0,0));
+
+
     }
+
+    @Test
+    void check_weapon_name_correct(){
+
+        // Act
+        String actual = axe.getName();
+        // Assert
+        String expected = "Bronx Axe";
+
+        assertEquals(expected, actual);
+
+    }
+
+
+    @Test
+    void check_weapon_slot_name_correct(){
+        // Act
+        String actual = axe.getSlot().name().toLowerCase();
+
+        // Assert
+        String expected = "weapon";
+
+        assertEquals(expected, actual);
+
+    }
+
+    @Test
+    void check_weapon_damage_correct(){
+        // Act
+        int actual = axe.getWeaponDamage();
+
+        // Assert
+        int expected = 1;
+
+        assertEquals(expected, actual);
+
+    }
+
+
+
+
+    @Test
+    void check_weapon_type_correct(){
+        // Act
+        String actual = axe.getWeaponType().name().toLowerCase();
+
+        // Assert
+        String expected = "axes";
+
+        assertEquals(expected, actual);
+
+
+    }
+
+
+    @Test
+    void check_armor_name_correct(){
+
+        // Act
+        String expected = plate.get_armor_name().toLowerCase();
+
+        // Assert
+        String actual = "bronx plate";
+        assertEquals(expected, actual);
+
+    }
+
+    @Test
+    void check_armor_level_correct(){
+
+        // Act
+
+        int expected = plate.get_armor_level();
+
+        // Assert
+        int actual = 1;
+        assertEquals(expected, actual);
+
+    }
+
+
+    @Test
+    void check_armor_slot_correct(){
+
+        // Act
+        String actual = plate.get_slot().toLowerCase();
+
+        // Assert
+        String expected = "body";
+        assertEquals(expected, actual);
+
+    }
+
     @Test
     void equip_warrior_weapon() throws InvalidLevel, InvalidWeaponType {
 
@@ -215,7 +325,7 @@ public class Equipment {
     void equip_warrior_Two_armor() throws InvalidLevel, InvalidWeaponType, InvalidArmorType {
 
         // Act
-       warrior.equip_weapon(sword);
+        warrior.equip_weapon(sword);
         warrior.equip_armor(plate);
 
         double expected = warrior.totalAttributes().getStrength();
@@ -243,3 +353,5 @@ public class Equipment {
     }
 
 }
+
+

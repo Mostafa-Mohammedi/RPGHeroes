@@ -12,7 +12,8 @@ import java.util.Map;
 
 
 /**
- * Abstract hero class to add main features the heroes
+ * Abstract hero class to add main features for heroes
+ * All the heroes extends the method and the variable from the hero class
  * @author Mostafa Mohammedi
 
  */
@@ -84,9 +85,6 @@ public abstract class Hero {
 
         return level += level_increase;
     }
-
-
-
     /**
      * method for calculating the damage a hero can inflict
      */

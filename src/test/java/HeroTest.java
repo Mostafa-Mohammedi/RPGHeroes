@@ -13,7 +13,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class Test_Hero {
+class HeroTest {
     private Warrior warrior;
     private Mage merlin;
     private Range robin;
