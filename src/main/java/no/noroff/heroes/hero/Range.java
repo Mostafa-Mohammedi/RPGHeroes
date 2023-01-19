@@ -3,6 +3,9 @@ import no.noroff.heroes.equipment.Slot;
 import no.noroff.heroes.equipment.Armor_type;
 import no.noroff.heroes.equipment.Weapon_type;
 
+/**
+ * Range class is used for creating a Range hero
+ */
 public class Range extends Hero {
 
     private final String warrior_name;
@@ -17,6 +20,10 @@ public class Range extends Hero {
     private double total_range_damage;
 
 
+    /**
+     * Constructor for creating an instance of the range hero
+     * @param name value String
+     */
     public Range(String name) {
         super(name);
 
@@ -46,14 +53,7 @@ public class Range extends Hero {
         // valid armor type
         Valid_Armor_type.add(Armor_type.LEATHER);
         Valid_Armor_type.add(Armor_type.MAIL);
-
-
     }
-    // getter and setter
-    public String getWarrior_name() {
-        return warrior_name;
-    }
-
 
     @Override
     public void damage() {

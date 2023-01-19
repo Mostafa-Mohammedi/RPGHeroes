@@ -4,6 +4,9 @@ import no.noroff.heroes.equipment.Armor_type;
 import no.noroff.heroes.equipment.Weapon_type;
 import no.noroff.heroes.item.Weapon;
 
+/**
+ * Rogue class is used for creating rogue class
+ */
 public class Rogue extends Hero{
     private final String warrior_name;
 
@@ -16,6 +19,10 @@ public class Rogue extends Hero{
     private double total_rogue_attribute;
     private double total_rogue_damage;
 
+    /**
+     * Constructor for creating the Rogue hero class
+     * @param name value string
+     */
     public Rogue(String name) {
         super(name);
         // level and name
@@ -50,15 +57,6 @@ public class Rogue extends Hero{
         Valid_Armor_type.add(Armor_type.MAIL);
 
     }
-
-
-    //getter and setter
-
-    public String getWarrior_name() {
-        return warrior_name;
-    }
-
-
     @Override
     public void damage() {
         if ( weapon_damage == 0) {

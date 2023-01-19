@@ -3,6 +3,9 @@ import no.noroff.heroes.equipment.Slot;
 import no.noroff.heroes.equipment.Armor_type;
 import no.noroff.heroes.equipment.Weapon_type;
 
+/**
+ * Mage class is used to initialize a mage hero
+ */
 public class Mage extends Hero{
     private final String warrior_name;
     private final double warrior_level;
@@ -15,6 +18,10 @@ public class Mage extends Hero{
     private double total_mage_attribute;
     private double total_mage_damage;
 
+    /**
+     * Constructor of the mage class
+     * @param name value string
+     */
     public Mage(String name) {
         super(name);
         // level and name
@@ -46,13 +53,6 @@ public class Mage extends Hero{
         Valid_Armor_type.add(Armor_type.CLOTH);
 
     }
-
-    //getter setter
-
-    public String getWarrior_name() {
-        return warrior_name;
-    }
-
 
     @Override
     public void damage() {

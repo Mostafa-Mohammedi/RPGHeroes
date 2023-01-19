@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8ed1e5e-b01b-43da-b653-eb4df5556550" name="Changes" comment="added new branch for testing">
+    <list default="true" id="b8ed1e5e-b01b-43da-b653-eb4df5556550" name="Changes" comment="added functionality inside the equip weapon for equiping the weapon inside the hashmap of equipment &lt;Slot, Item&gt;.&#10; added functionality inside the equip armor for equiping the armor inside the hashmap of equipment &lt;Slot, Item&gt;.&#10; added extra test for checking for all the heroes: name, level and attribute">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/equipment/Armor_type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/equipment/Armor_type.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/equipment/Slot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/equipment/Slot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/equipment/Weapon_type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/equipment/Weapon_type.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Hero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/HeroAttribute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/HeroAttribute.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Mage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Range.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Range.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/hero/Rogue.java" afterDir="false" />
@@ -14,7 +18,9 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/item/Armor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/item/Armor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/item/Item.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/item/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/noroff/heroes/item/Weapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Equipment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Equipment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Test_Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test_Hero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test_Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test_Item.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -254,6 +260,8 @@
       <workItem from="1673943697395" duration="9523000" />
       <workItem from="1673968173423" duration="11852000" />
       <workItem from="1674071375454" duration="6296000" />
+      <workItem from="1674112189253" duration="6508000" />
+      <workItem from="1674118726368" duration="667000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.&#10;Added Readme.md file and wrote starting information about the hero class, attribute class and equipment class. added the hero class">
       <created>1673621694929</created>
@@ -455,7 +463,7 @@
     <SUITE FILE_PATH="coverage/RPGHeroes$Main.ic" NAME="Main Coverage Results" MODIFIED="1673727464883" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>no.noroff.heroes.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/RPGHeroes$Tests_in__RPGHeroes_test_.ic" NAME="Tests in 'RPGHeroes.test' Coverage Results" MODIFIED="1674040759763" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/RPGHeroes$Tests_in__RPGHeroes_test_.ic" NAME="Tests in 'RPGHeroes.test' Coverage Results" MODIFIED="1674118683240" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/RPGHeroes$WarriorTest_Hero_level_correct_level_increase.ic" NAME="WarriorTest.Hero_level_correct_level_increase Coverage Results" MODIFIED="1673790273601" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

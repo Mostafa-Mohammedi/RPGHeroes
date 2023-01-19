@@ -4,6 +4,9 @@ import no.noroff.heroes.equipment.Armor_type;
 import no.noroff.heroes.equipment.Weapon_type;
 
 
+/**
+ * Warrior class is used for creating a warrior hero
+ */
 public class Warrior extends Hero {
     private final String warrior_name;
 
@@ -16,7 +19,10 @@ public class Warrior extends Hero {
     private double total_warrior_attribute;
     private double total_warrior_damage;
 
-    //constructor
+    /**
+     * Constructor for creating an instance of the  warrior hero
+     * @param name value string
+     */
     public Warrior(String name) {
         super(name);
 
@@ -48,19 +54,16 @@ public class Warrior extends Hero {
         // valid armor type
         Valid_Armor_type.add(Armor_type.MAIL);
         Valid_Armor_type.add(Armor_type.PLATE);
-
     }
 
-    //getter and setter
-    public String getWarrior_name() {
-        return warrior_name;
-    }
+    /**
+     * getter for getting the total warrior damage
+     * @return value double
+     */
 
     public double get_total_warrior_damage() {
         return total_warrior_damage;
     }
-
-    // method
 
     @Override
     public void damage() {

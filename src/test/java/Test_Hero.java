@@ -35,7 +35,7 @@ class Test_Hero {
     void Create_warrior_check_name(){
 
         // Act
-        String  actual = warrior.getWarrior_name();
+        String  actual = warrior.getName();
 
         // Assert
         String expected = "Djengis Khan";
@@ -92,7 +92,7 @@ class Test_Hero {
     void Create_mage_check_name(){
 
         // Act
-        String  actual = merlin.getWarrior_name();
+        String  actual = merlin.getName();
 
         // Assert
         String expected = "Merlin";
@@ -147,7 +147,7 @@ class Test_Hero {
     void Create_rogue_check_name(){
 
         // Act
-        String  actual = hitman.getWarrior_name();
+        String  actual = hitman.getName();
 
         // Assert
         String expected = "Punisher";
@@ -202,7 +202,7 @@ class Test_Hero {
     void Create_range_check_name(){
 
         // Act
-        String  actual = robin.getWarrior_name();
+        String  actual = robin.getName();
 
         // Assert
         String expected = "Robin Hood";
@@ -260,9 +260,9 @@ class Test_Hero {
         int warrior_level = 1;
         int warrior_levelIncrease = 2;
 
-        double  warrior_strength_increase_each_level = 3;
-        double warrior_dexterity_increase_each_level = 2;
-        double warrior_intelligence_increase_each_level = 1 ;
+        int  warrior_strength_increase_each_level = 3;
+        int warrior_dexterity_increase_each_level = 2;
+        int warrior_intelligence_increase_each_level = 1 ;
 
         // Act
         int  actual = warrior.levelUp(warrior_levelIncrease, warrior_strength_increase_each_level, warrior_dexterity_increase_each_level, warrior_intelligence_increase_each_level);
@@ -277,9 +277,9 @@ class Test_Hero {
 
         //Arrange
         int warrior_levelIncrease = 2;
-        double  warrior_strength_increase_each_level = 3;
-        double warrior_dexterity_increase_each_level = 2;
-        double warrior_intelligence_increase_each_level = 1 ;
+        int  warrior_strength_increase_each_level = 3;
+        int warrior_dexterity_increase_each_level = 2;
+        int warrior_intelligence_increase_each_level = 1 ;
 
 
         // Act
@@ -298,9 +298,9 @@ class Test_Hero {
 
         //Arrange
         int warrior_levelIncrease = 1;
-        double  warrior_strength_increase_each_level = 3;
-        double warrior_dexterity_increase_each_level = 2;
-        double warrior_intelligence_increase_each_level = 1 ;
+        int  warrior_strength_increase_each_level = 3;
+        int warrior_dexterity_increase_each_level = 2;
+        int warrior_intelligence_increase_each_level = 1 ;
 
 
         // Act
@@ -319,9 +319,9 @@ class Test_Hero {
         //Arrange
         int warrior_levelIncrease = 1;
 
-        double  warrior_strength_increase_each_level = 3;
-        double warrior_dexterity_increase_each_level = 2;
-        double warrior_intelligence_increase_each_level = 1 ;
+        int  warrior_strength_increase_each_level = 3;
+        int warrior_dexterity_increase_each_level = 2;
+        int warrior_intelligence_increase_each_level = 1 ;
 
 
         // Act

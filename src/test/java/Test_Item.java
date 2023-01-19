@@ -37,7 +37,7 @@ public class Test_Item {
     void check_weapon_name_correct(){
 
         // Act
-        String actual = weapon.get_weapon_name();
+        String actual = weapon.getName();
         // Assert
         String expected = "Bronx Axe";
 
@@ -49,7 +49,7 @@ public class Test_Item {
     @Test
     void check_weapon_slot_name_correct(){
         // Act
-        String actual = weapon.get_slot().toLowerCase();
+        String actual = weapon.getSlot().name().toLowerCase();
 
         // Assert
         String expected = "weapon";

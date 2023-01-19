@@ -10,7 +10,6 @@ import no.noroff.heroes.item.Armor;
 import no.noroff.heroes.item.Weapon;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -86,7 +85,7 @@ public class Equipment {
         String actual = warrior.equip_weapon(sword);
 
         // Assert
-        String expected = warrior.getName() + " has been equip with " + sword.get_weapon_name();
+        String expected = warrior.getName() + " has been equip with " + sword.getName();
 
         assertEquals(expected, actual);
 
@@ -148,7 +147,7 @@ public class Equipment {
         String actual = exception.getMessage();
 
         // Assert
-        String expected = warrior.getWarrior_name() + " level is to low please use another weapon.";
+        String expected = warrior.getName() + " level is to low please use another weapon.";
 
         assertEquals(expected, actual);
 

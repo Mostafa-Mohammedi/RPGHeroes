@@ -1,5 +1,4 @@
 package no.noroff.heroes.hero;
-
 import no.noroff.heroes.CustomException.InvalidArmorType;
 import no.noroff.heroes.CustomException.InvalidLevel;
 import no.noroff.heroes.CustomException.InvalidWeaponType;
@@ -7,8 +6,6 @@ import no.noroff.heroes.equipment.Armor_type;
 import no.noroff.heroes.equipment.Weapon_type;
 import no.noroff.heroes.item.Item;
 import no.noroff.heroes.equipment.Slot;
-
-
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -65,7 +62,6 @@ public abstract class Hero {
         return levelAttribute;
     }
 
-
     /**
      * Method for leveling up the hero and the heroes attribute.
      * @param level_increase double level increase
@@ -87,6 +83,8 @@ public abstract class Hero {
         return level += level_increase;
     }
 
+
+
     /**
      * method for calculating the damage a hero can inflict
      */
@@ -94,7 +92,7 @@ public abstract class Hero {
 
     /**
      * method for equipping an armor to hero.
-     * @param armor takes an instance of the armor class
+     * @param armor takes an instance of the Item class
      * @return return a string value confirming the new hero has been equipped
      * @throws InvalidArmorType throw a custom exception if the hero tries to equip wrong armor type
      * @throws InvalidLevel throw a custom exception if a hero tries to equip a armor that has a higher level then the hero level
@@ -120,7 +118,7 @@ public abstract class Hero {
 
     /**
      * method for removing hero armor of hero
-     * @param armor takes an armor instance
+     * @param armor takes an Item instance
      * @return return a string confirming that the armor has been removed
      */
     public  String remove_armor(Item armor) {
@@ -129,9 +127,9 @@ public abstract class Hero {
         return "item has been removed";
     }
     /**
-     * method for equipping a weapon to hero.
+     * method for equipping Item  to hero.
      * add the attribute to hero for weapon damage
-     * @param weapon take  a weapon instance as a parameter to get acces to the attribute
+     * @param weapon take  a weapon instance as a parameter to get access to the attribute
      * @return a string confirming that the hero has been equipped with a weapon
      * @throws InvalidLevel a custom exception that the weapon level is too high
      * @throws InvalidWeaponType a custom exception that the hero tries to equip a wrong weapon type
